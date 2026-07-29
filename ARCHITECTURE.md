@@ -175,9 +175,3 @@ No circular imports; `_model` imports nothing from the package.
 | Position-based splice | Guarantees unmodified bytes survive | Requires storing `_offset` per record |
 | Raw dict copies | Non-standard plist entries preserved | Two representations (raw + typed) per section |
 | No external deps | Zero install friction | Slower plist writing (stdlib `plistlib` is pure Python) |
-
-## Deferred
-
-- Full reverse-engineering of every byte in `LogicBinaryPreferences`
-- Version-specific binary format detectors
-- GUI or TUI key-binding editor

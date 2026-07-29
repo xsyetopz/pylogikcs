@@ -267,7 +267,7 @@ The 684-byte header contains two copies of a key-binding table at mirrored
 offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
 4 bytes:
 
-```
+```text
 ┌──────────┬──────────┬──────────┬──────────┐
 │  byte 0  │  byte 1  │  byte 2  │  byte 3  │
 ├──────────┼──────────┼──────────┼──────────┤
@@ -281,7 +281,7 @@ offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
   The encoding is hybrid:
 
   | Range | Encoding | Examples |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x20`–`0x7e` | ASCII printable | Space (`0x20`), `'a'` (`0x61`), `'-'` (`0x2d`) |
   | `0x00`–`0x1f`, `0x7f` | Apple Carbon `kVK_*` | Return (`0x24`), Delete (`0x33`), Escape (`0x35`), Tab (`0x30`) |
   | `0x7b`–`0x7e` | Carbon arrow keys | Left (`0x7b`), Right (`0x7c`), Down (`0x7d`), Up (`0x7e`) |
@@ -294,7 +294,7 @@ offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
 - **flags** — modifier key bitmask:
 
   | Value | Modifier | Source |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x00` | None | Default preset, all records |
   | `0x01` | Shift (⇧) | `Record_R_to_SHIFT_R.logikcs` |
   | `0x04` | Ctrl (⌃) | `Play_SPACE_to_CTRL_SPACE.logikcs` |
@@ -304,7 +304,7 @@ offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
   Multi-modifier combinations confirmed via bitwise OR across 9 locale presets:
 
   | Flags | Combination | Example command |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x21` | Cmd+Shift | "Save Project as…" |
   | `0x25` | Cmd+Ctrl+Shift | "Unpack Take Folder…" |
   | `0x28` | Cmd+Opt | "Split Regions/Events…" |
@@ -318,7 +318,7 @@ offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
 
 A second entry format appears in the header:
 
-```
+```text
 ┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
 │  byte 0  │  byte 1  │  byte 2  │  byte 3  │  byte 4  │  byte 5  │
 ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -337,11 +337,32 @@ Format A when a modifier is assigned.
 
 ## Unknowns
 
-1. Mapping from internal command indices (f7 records) to user-visible command
-   IDs (from `KeyCommandColors` / `KeyCommandShortNames`)
+1. Mapping from **every** internal command index to user-visible command ID
+   (287 IDs named via plist registry; ~573 remain unlabeled)
 2. Record subtype B internal structure (the ~20 records with inflated indices)
-3. Semantics of the 6-byte header entry format (Format B)
-4. Trailer purpose (13,980 bytes, mostly zeroes)
-5. Touch Bar slot-to-function mapping
+3. Semantics of the 6-byte header entry format (Format B — disabled/unassigned)
+4. Trailer purpose (12–22 KB depending on LP version)
+5. Touch Bar slot-to-function mapping (user's device has no Touch Bar)
 6. The `"New Child"` → `""` entry in KeyCommandColors
-7. Whether the binary format changes across Logic Pro versions
+
+## Cross-version compatibility
+
+| Version | Format | `f7 00` records | Colors/Names | TouchBar | Binary size | Library support |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logic Pro 7.x–9.1.1 | Pre-LPX | None — 6-byte records at offset 0x01c8, no sentinels | No | No | 45–51 KB | ✅ Parsed (raw .pro or .logikcs) |
+| Logic Pro 10.0–10.6.2 | Early LPX | Yes — 135–242 records | Yes (61/33) | Yes (zlib) | 51,508 | ✅ Full parse |
+| Logic Pro 10.7–12.3.0 | Current LPX | Yes — 155–256 records | Yes (61–62/33–42) | Yes (zlib) | 43,170 | ✅ Full parse |
+
+The `f7 00` sentinel record format was introduced in Logic Pro X (10.0) and
+is stable through 12.3.  LP 10.7 reduced the trailer allocation.
+
+Logic Pro 7–9 use contiguous 6-byte records (`[key_code][flags][u32 zeros]`)
+starting at offset 0x01c8.  Files from this era may be either `.pro` (raw
+binary) or `.logikcs` (plist XML wrapper).  The library autodetects the
+format and parses both correctly.  Format A header entries appear in
+pre-LPX files but without mirrored copies.
+
+`KeyCommandColors`, `KeyCommandShortNames`, and `TouchBarAssignments` plist
+keys were added in Logic Pro X.  Pre-LPX files have only `Content`,
+`Version`, and `LogicBinaryPreferences` (plist-wrapped) or are raw binary
+(`.pro`).

@@ -36,10 +36,27 @@ def _stable_key(k: object) -> str:
 
 
 def read_plist(path: str) -> LogikcsFile:
-    from ._model import ColorMap, LogikcsFile, ShortNameMap
+    from ._model import CONTENT_TYPE, ColorMap, LogikcsFile, ShortNameMap
 
     with open(path, "rb") as fh:
-        raw: dict = plistlib.load(fh)
+        try:
+            raw: dict = plistlib.load(fh)
+        except plistlib.InvalidFileException:
+            # Pre-LPX .pro file: the file *is* the raw binary blob.
+            # No plist wrapper, no colors, no short names.
+            fh.seek(0)
+            binary_raw = fh.read()
+            bindings, binary_blob = decode_commands(binary_raw)
+            header_bindings = decode_header_entries(binary_blob)
+            return LogikcsFile(
+                version="7.x",
+                content=CONTENT_TYPE,
+                bindings=bindings,
+                header_bindings=header_bindings,
+                _binary_blob=binary_blob,
+                _is_raw=True,
+                source_path=path,
+            )
 
     content = raw.get("Content", "")
     version = raw.get("Version", "")
@@ -86,6 +103,12 @@ def read_plist(path: str) -> LogikcsFile:
 def write_plist(preset: LogikcsFile, path: str) -> None:
     binary_bytes = encode_commands(preset._binary_blob, preset.bindings)
     binary_bytes = encode_header_entries(binary_bytes, preset.header_bindings)
+
+    if preset._is_raw:
+        # .pro file: write raw binary, no plist wrapper
+        with open(path, "wb") as fh:
+            fh.write(binary_bytes)
+        return
     touchbar_bytes = encode_touchbar(preset._touchbar_raw)
 
     out: dict = {}

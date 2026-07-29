@@ -166,9 +166,3 @@ sequenceDiagram
 | 位置拼接 | 保证未修改字节完整保留 | 每条记录需存储 `_offset` |
 | 原始字典副本 | 非标准 plist 条目得以保留 | 每区域两份表示（原始 + 类型化） |
 | 无外部依赖 | 零安装成本 | plist 写入较慢（stdlib `plistlib` 为纯 Python） |
-
-## 推迟
-
-- `LogicBinaryPreferences` 中每个字节的完整逆向
-- 按版本区分的二进制格式检测
-- GUI 或 TUI 按键绑定编辑器

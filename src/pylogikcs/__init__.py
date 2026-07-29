@@ -15,7 +15,15 @@ Usage::
     preset.save("Modified.logikcs")
 """
 
-from ._model import ColorMap, HeaderBinding, KeyBinding, LogikcsFile, ShortNameMap
+from ._model import (
+    ColorMap,
+    HeaderBinding,
+    KeyBinding,
+    LogikcsFile,
+    ShortNameMap,
+    command_name,
+    keybinding_name,
+)
 
 
 def load(path: str) -> LogikcsFile:
@@ -28,5 +36,7 @@ __all__ = [
     "KeyBinding",
     "LogikcsFile",
     "ShortNameMap",
+    "command_name",
+    "keybinding_name",
     "load",
 ]

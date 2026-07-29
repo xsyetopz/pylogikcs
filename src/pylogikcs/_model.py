@@ -32,9 +32,7 @@ class KeyBinding:
     @classmethod
     def from_bytes(cls, data: bytes) -> Self:
         if len(data) != cls.RECORD_LEN:
-            raise ValueError(
-                f"KeyBinding record must be {cls.RECORD_LEN} bytes, got {len(data)}"
-            )
+            raise ValueError(f"KeyBinding record must be {cls.RECORD_LEN} bytes, got {len(data)}")
         if data[4:6] != cls.TERMINATOR:
             raise ValueError(
                 f"KeyBinding terminator mismatch: expected {cls.TERMINATOR.hex()}, "
@@ -122,6 +120,11 @@ class HeaderBinding:
         return f"0x{self.key_code:02x}"
 
     @property
+    def name(self) -> str:
+        """Human-readable command name from the Logic Pro registry, or ''."""
+        return keybinding_name(self.key_code, self.flags)
+
+    @property
     def is_modified(self) -> bool:
         return self._modified
 
@@ -172,6 +175,38 @@ class ShortNameMap(_ValidatedDict):
 
 CONTENT_TYPE = "com.apple.logic.keycommand"
 
+# Lazy-loaded command registry from Logic Pro preferences.
+_registry: dict | None = None
+
+
+def _load_registry() -> dict:
+    global _registry
+    if _registry is None:
+        import json
+        from pathlib import Path
+
+        path = Path(__file__).parent / "_registry.json"
+        with open(path) as f:
+            _registry = json.load(f)
+    return _registry
+
+
+def command_name(command_id: int) -> str:
+    """Return the human-readable name for a Logic command ID, or '' if unknown."""
+    reg = _load_registry()
+    return reg.get("id_to_name", {}).get(str(command_id), "")
+
+
+def keybinding_name(key_code: int, flags: int) -> str:
+    """Return the command name matching a (key_code, flags) pair, or ''."""
+    reg = _load_registry()
+    for cid, info in reg.get("commands", {}).items():
+        if info.get("key") == key_code and info.get("modifier") == flags:
+            name = reg.get("id_to_name", {}).get(cid, "")
+            if name:
+                return name
+    return ""
+
 
 @dataclass
 class LogikcsFile:
@@ -203,6 +238,7 @@ class LogikcsFile:
     _raw_short_names: dict = field(default_factory=dict, repr=False)
 
     source_path: str | None = field(default=None, repr=False)
+    _is_raw: bool = field(default=False, repr=False)  # True for .pro files (no plist wrapper)
 
     @classmethod
     def load(cls, path: str) -> Self:

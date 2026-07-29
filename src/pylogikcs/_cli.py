@@ -117,10 +117,12 @@ def _cmd_list_headers(preset) -> None:
             flags_str += "⌃"
         if not flags_str:
             flags_str = "-"
+        name = hb.name
+        name_str = f"  ({name})" if name else ""
         print(
             f"[{i:3d}] 0x{hb.key_code:02x} ({hb.key_char})  "
             f"flags=0x{hb.flags:02x} {flags_str}  "
-            f"off=0x{hb._offset1:04x}/0x{hb._offset2:04x}"
+            f"off=0x{hb._offset1:04x}/0x{hb._offset2:04x}{name_str}"
         )
 
 

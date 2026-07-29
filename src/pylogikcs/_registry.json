@@ -1,0 +1,5453 @@
+{
+  "commands": {
+    "579": {
+      "key": 114,
+      "modifier": 40,
+      "char_code": 114,
+      "name": "Randomize Current Edit Mode Values for Row"
+    },
+    "1845": {
+      "key": 49,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "1249": {
+      "key": 112,
+      "modifier": 36,
+      "char_code": 112,
+      "name": ""
+    },
+    "2012": {
+      "key": 102,
+      "modifier": 1,
+      "char_code": 102,
+      "name": ""
+    },
+    "1262": {
+      "key": 19,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "96": {
+      "key": 97,
+      "modifier": 4,
+      "char_code": 97,
+      "name": ""
+    },
+    "679": {
+      "key": 92,
+      "modifier": 4,
+      "char_code": 0,
+      "name": "Set Row Playback Mode to Shuffle"
+    },
+    "1795": {
+      "key": 97,
+      "modifier": 40,
+      "char_code": 97,
+      "name": "New Audio Track"
+    },
+    "51": {
+      "key": 60,
+      "modifier": 0,
+      "char_code": 60,
+      "name": "Catch"
+    },
+    "1015": {
+      "key": 97,
+      "modifier": 36,
+      "char_code": 97,
+      "name": "Toggle Selected Tracks or Channel Strips Automation Latch/Read"
+    },
+    "1611": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "879": {
+      "key": 43,
+      "modifier": 0,
+      "char_code": 43,
+      "name": ""
+    },
+    "2013": {
+      "key": 111,
+      "modifier": 1,
+      "char_code": 111,
+      "name": ""
+    },
+    "53": {
+      "key": 111,
+      "modifier": 8,
+      "char_code": 111,
+      "name": "Toggle MIDI Out (Note Preview)"
+    },
+    "1263": {
+      "key": 20,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2844": {
+      "key": 121,
+      "modifier": 4,
+      "char_code": 121,
+      "name": ""
+    },
+    "2248": {
+      "key": 34,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "1796": {
+      "key": 115,
+      "modifier": 40,
+      "char_code": 115,
+      "name": "Save Selection As\u2026"
+    },
+    "1612": {
+      "key": 115,
+      "modifier": 36,
+      "char_code": 115,
+      "name": ""
+    },
+    "10": {
+      "key": 43,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2312": {
+      "key": 104,
+      "modifier": 32,
+      "char_code": 104,
+      "name": "Hide Logic Pro"
+    },
+    "2014": {
+      "key": 101,
+      "modifier": 1,
+      "char_code": 101,
+      "name": ""
+    },
+    "11": {
+      "key": 47,
+      "modifier": 0,
+      "char_code": 0,
+      "name": "Velocity 127 (fff)"
+    },
+    "1264": {
+      "key": 21,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2845": {
+      "key": 117,
+      "modifier": 4,
+      "char_code": 117,
+      "name": ""
+    },
+    "1797": {
+      "key": 117,
+      "modifier": 40,
+      "char_code": 117,
+      "name": "Cut Sections of Selected Arrangement Markers"
+    },
+    "12": {
+      "key": 44,
+      "modifier": 1,
+      "char_code": 44,
+      "name": "Fast Rewind"
+    },
+    "1613": {
+      "key": 105,
+      "modifier": 4,
+      "char_code": 105,
+      "name": ""
+    },
+    "13": {
+      "key": 46,
+      "modifier": 1,
+      "char_code": 46,
+      "name": ""
+    },
+    "1030": {
+      "key": 97,
+      "modifier": 44,
+      "char_code": 97,
+      "name": "Toggle Automation Quick Access"
+    },
+    "2313": {
+      "key": 104,
+      "modifier": 40,
+      "char_code": 104,
+      "name": "Hide Others"
+    },
+    "2015": {
+      "key": 99,
+      "modifier": 1,
+      "char_code": 99,
+      "name": ""
+    },
+    "1265": {
+      "key": 23,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2846": {
+      "key": 106,
+      "modifier": 4,
+      "char_code": 106,
+      "name": "Set Row Playback Mode to Random"
+    },
+    "15": {
+      "key": 99,
+      "modifier": 0,
+      "char_code": 99,
+      "name": ""
+    },
+    "1798": {
+      "key": 120,
+      "modifier": 40,
+      "char_code": 120,
+      "name": "Crop Sample"
+    },
+    "1614": {
+      "key": 102,
+      "modifier": 4,
+      "char_code": 102,
+      "name": ""
+    },
+    "16": {
+      "key": 112,
+      "modifier": 44,
+      "char_code": 112,
+      "name": "Toggle Autopunch Mode"
+    },
+    "1031": {
+      "key": 103,
+      "modifier": 1,
+      "char_code": 103,
+      "name": "Enable/Disable Groups"
+    },
+    "17": {
+      "key": 115,
+      "modifier": 4,
+      "char_code": 115,
+      "name": ""
+    },
+    "2314": {
+      "key": 109,
+      "modifier": 40,
+      "char_code": 109,
+      "name": "Minimize All Windows"
+    },
+    "2016": {
+      "key": 109,
+      "modifier": 1,
+      "char_code": 109,
+      "name": ""
+    },
+    "1266": {
+      "key": 22,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2847": {
+      "key": 121,
+      "modifier": 12,
+      "char_code": 121,
+      "name": "Set Pattern Playback Mode to Pendulum"
+    },
+    "1799": {
+      "key": 110,
+      "modifier": 1,
+      "char_code": 110,
+      "name": "Rename Regions/Cells/Scenes"
+    },
+    "1019": {
+      "key": 111,
+      "modifier": 37,
+      "char_code": 111,
+      "name": "Set All Tracks to Automation Off"
+    },
+    "1615": {
+      "key": 112,
+      "modifier": 4,
+      "char_code": 112,
+      "name": ""
+    },
+    "1032": {
+      "key": 101,
+      "modifier": 36,
+      "char_code": 101,
+      "name": "Track Automation Event List\u2026"
+    },
+    "2315": {
+      "key": 9,
+      "modifier": 0,
+      "char_code": 9,
+      "name": ""
+    },
+    "2017": {
+      "key": 116,
+      "modifier": 4,
+      "char_code": 116,
+      "name": ""
+    },
+    "1267": {
+      "key": 26,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2848": {
+      "key": 117,
+      "modifier": 12,
+      "char_code": 117,
+      "name": "Set Pattern Playback Mode to Wander"
+    },
+    "1280": {
+      "key": 103,
+      "modifier": 9,
+      "char_code": 103,
+      "name": ""
+    },
+    "2563": {
+      "key": 43,
+      "modifier": 32,
+      "char_code": 63275,
+      "name": ""
+    },
+    "1318": {
+      "key": 13,
+      "modifier": 12,
+      "char_code": 13,
+      "name": ""
+    },
+    "2316": {
+      "key": 9,
+      "modifier": 1,
+      "char_code": 9,
+      "name": ""
+    },
+    "1268": {
+      "key": 28,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2849": {
+      "key": 106,
+      "modifier": 12,
+      "char_code": 106,
+      "name": "Set Pattern Playback Mode to Random"
+    },
+    "2862": {
+      "key": 15,
+      "modifier": 40,
+      "char_code": 0,
+      "name": ""
+    },
+    "1617": {
+      "key": 31,
+      "modifier": 32,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1319": {
+      "key": 8,
+      "modifier": 12,
+      "char_code": 127,
+      "name": ""
+    },
+    "1630": {
+      "key": 109,
+      "modifier": 4,
+      "char_code": 109,
+      "name": ""
+    },
+    "1269": {
+      "key": 25,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2330": {
+      "key": 122,
+      "modifier": 0,
+      "char_code": 122,
+      "name": ""
+    },
+    "1282": {
+      "key": 112,
+      "modifier": 40,
+      "char_code": 112,
+      "name": "New Session Player SI Track\u2026"
+    },
+    "1618": {
+      "key": 30,
+      "modifier": 32,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1631": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "1333": {
+      "key": 15,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "2318": {
+      "key": 105,
+      "modifier": 0,
+      "char_code": 105,
+      "name": ""
+    },
+    "2331": {
+      "key": 106,
+      "modifier": 0,
+      "char_code": 106,
+      "name": ""
+    },
+    "1632": {
+      "key": 28,
+      "modifier": 32,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1334": {
+      "key": 15,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "2319": {
+      "key": 103,
+      "modifier": 0,
+      "char_code": 103,
+      "name": ""
+    },
+    "2332": {
+      "key": 99,
+      "modifier": 0,
+      "char_code": 99,
+      "name": ""
+    },
+    "2269": {
+      "key": 17,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2580": {
+      "key": 117,
+      "modifier": 5,
+      "char_code": 117,
+      "name": "Apply Channel Strip Configuration User Default"
+    },
+    "1037": {
+      "key": 8,
+      "modifier": 36,
+      "char_code": 127,
+      "name": ""
+    },
+    "2333": {
+      "key": 118,
+      "modifier": 0,
+      "char_code": 118,
+      "name": ""
+    },
+    "1285": {
+      "key": 46,
+      "modifier": 4,
+      "char_code": 46,
+      "name": "Forward by Transient"
+    },
+    "1634": {
+      "key": 116,
+      "modifier": 4,
+      "char_code": 116,
+      "name": ""
+    },
+    "1038": {
+      "key": 8,
+      "modifier": 37,
+      "char_code": 127,
+      "name": ""
+    },
+    "2334": {
+      "key": 113,
+      "modifier": 0,
+      "char_code": 113,
+      "name": ""
+    },
+    "1286": {
+      "key": 44,
+      "modifier": 4,
+      "char_code": 44,
+      "name": ""
+    },
+    "2867": {
+      "key": 13,
+      "modifier": 1,
+      "char_code": 13,
+      "name": ""
+    },
+    "2880": {
+      "key": 9,
+      "modifier": 13,
+      "char_code": 0,
+      "name": ""
+    },
+    "1337": {
+      "key": 17,
+      "modifier": 13,
+      "char_code": 0,
+      "name": ""
+    },
+    "2335": {
+      "key": 97,
+      "modifier": 0,
+      "char_code": 97,
+      "name": ""
+    },
+    "2050": {
+      "key": 120,
+      "modifier": 5,
+      "char_code": 120,
+      "name": "Show/Hide Track Number"
+    },
+    "2881": {
+      "key": 9,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "2583": {
+      "key": 123,
+      "modifier": 12,
+      "char_code": 0,
+      "name": "Go to Region Start"
+    },
+    "2336": {
+      "key": 117,
+      "modifier": 0,
+      "char_code": 117,
+      "name": ""
+    },
+    "2882": {
+      "key": 2,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "2584": {
+      "key": 124,
+      "modifier": 12,
+      "char_code": 0,
+      "name": "Go to Region End"
+    },
+    "2337": {
+      "key": 119,
+      "modifier": 0,
+      "char_code": 119,
+      "name": ""
+    },
+    "2350": {
+      "key": 103,
+      "modifier": 4,
+      "char_code": 103,
+      "name": ""
+    },
+    "2052": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "2883": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "2585": {
+      "key": 123,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "2338": {
+      "key": 114,
+      "modifier": 0,
+      "char_code": 114,
+      "name": ""
+    },
+    "2053": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "2884": {
+      "key": 8,
+      "modifier": 36,
+      "char_code": 127,
+      "name": ""
+    },
+    "2586": {
+      "key": 124,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "2700": {
+      "key": 123,
+      "modifier": 8,
+      "char_code": 0,
+      "name": "Shift selected Zones/Groups Left"
+    },
+    "2339": {
+      "key": 120,
+      "modifier": 0,
+      "char_code": 120,
+      "name": ""
+    },
+    "2885": {
+      "key": 8,
+      "modifier": 37,
+      "char_code": 127,
+      "name": ""
+    },
+    "2587": {
+      "key": 126,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2105": {
+      "key": 108,
+      "modifier": 5,
+      "char_code": 108,
+      "name": "Show/Hide Long Faders"
+    },
+    "2701": {
+      "key": 124,
+      "modifier": 8,
+      "char_code": 0,
+      "name": "Shift selected Zones/Groups Right"
+    },
+    "2651": {
+      "key": 116,
+      "modifier": 0,
+      "char_code": 116,
+      "name": ""
+    },
+    "2886": {
+      "key": 126,
+      "modifier": 8,
+      "char_code": 0,
+      "name": "Hide All Regions"
+    },
+    "2588": {
+      "key": 125,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2106": {
+      "key": 110,
+      "modifier": 5,
+      "char_code": 110,
+      "name": ""
+    },
+    "2354": {
+      "key": 0,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "2950": {
+      "key": 10,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "2652": {
+      "key": 100,
+      "modifier": 0,
+      "char_code": 100,
+      "name": ""
+    },
+    "1705": {
+      "key": 45,
+      "modifier": 32,
+      "char_code": 45,
+      "name": "Waveform Vertical Zoom Out"
+    },
+    "1122": {
+      "key": 46,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "2887": {
+      "key": 125,
+      "modifier": 8,
+      "char_code": 0,
+      "name": "Show All Regions"
+    },
+    "2589": {
+      "key": 126,
+      "modifier": 1,
+      "char_code": 0,
+      "name": "Extend Cell, or Track Selection Up"
+    },
+    "2951": {
+      "key": 124,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "2653": {
+      "key": 109,
+      "modifier": 0,
+      "char_code": 109,
+      "name": ""
+    },
+    "1706": {
+      "key": 43,
+      "modifier": 32,
+      "char_code": 43,
+      "name": ""
+    },
+    "2888": {
+      "key": 126,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "Transpose +1 Octave"
+    },
+    "2952": {
+      "key": 123,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "1707": {
+      "key": 157,
+      "modifier": 32,
+      "char_code": 249,
+      "name": ""
+    },
+    "2889": {
+      "key": 125,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "Transpose -1 Octave"
+    },
+    "2357": {
+      "key": 13,
+      "modifier": 44,
+      "char_code": 13,
+      "name": ""
+    },
+    "2953": {
+      "key": 1,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "2655": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "2954": {
+      "key": 46,
+      "modifier": 5,
+      "char_code": 0,
+      "name": "Insert: Decrescendo"
+    },
+    "2656": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "220": {
+      "key": 105,
+      "modifier": 5,
+      "char_code": 105,
+      "name": ""
+    },
+    "2955": {
+      "key": 30,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "320": {
+      "key": 30,
+      "modifier": 1,
+      "char_code": 63232,
+      "name": ""
+    },
+    "2657": {
+      "key": 0,
+      "modifier": 1,
+      "char_code": 63234,
+      "name": ""
+    },
+    "2670": {
+      "key": 100,
+      "modifier": 4,
+      "char_code": 100,
+      "name": ""
+    },
+    "221": {
+      "key": 105,
+      "modifier": 4,
+      "char_code": 105,
+      "name": ""
+    },
+    "420": {
+      "key": 32,
+      "modifier": 0,
+      "char_code": 32,
+      "name": ""
+    },
+    "321": {
+      "key": 31,
+      "modifier": 1,
+      "char_code": 63233,
+      "name": ""
+    },
+    "80": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "520": {
+      "key": 152,
+      "modifier": 8,
+      "char_code": 242,
+      "name": ""
+    },
+    "123": {
+      "key": 117,
+      "modifier": 0,
+      "char_code": 117,
+      "name": ""
+    },
+    "421": {
+      "key": 110,
+      "modifier": 4,
+      "char_code": 110,
+      "name": ""
+    },
+    "81": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "2956": {
+      "key": 44,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2658": {
+      "key": 0,
+      "modifier": 1,
+      "char_code": 63235,
+      "name": ""
+    },
+    "82": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "521": {
+      "key": 83,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "422": {
+      "key": 103,
+      "modifier": 4,
+      "char_code": 103,
+      "name": ""
+    },
+    "83": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "224": {
+      "key": 30,
+      "modifier": 12,
+      "char_code": 63232,
+      "name": ""
+    },
+    "522": {
+      "key": 84,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1376": {
+      "key": 37,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "423": {
+      "key": 105,
+      "modifier": 4,
+      "char_code": 105,
+      "name": ""
+    },
+    "2957": {
+      "key": 35,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2659": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "85": {
+      "key": 117,
+      "modifier": 37,
+      "char_code": 117,
+      "name": "Unpack Take Folder to Independent Tracks or Unpack Folder/Take Cell to New Tracks"
+    },
+    "2970": {
+      "key": 124,
+      "modifier": 37,
+      "char_code": 0,
+      "name": "Show Subrows for All Rows"
+    },
+    "920": {
+      "key": 49,
+      "modifier": 0,
+      "char_code": 49,
+      "name": "1/1 Note"
+    },
+    "225": {
+      "key": 31,
+      "modifier": 12,
+      "char_code": 63233,
+      "name": ""
+    },
+    "40": {
+      "key": 92,
+      "modifier": 0,
+      "char_code": 92,
+      "name": ""
+    },
+    "250": {
+      "key": 102,
+      "modifier": 13,
+      "char_code": 102,
+      "name": "Settings: Global Format"
+    },
+    "424": {
+      "key": 111,
+      "modifier": 4,
+      "char_code": 111,
+      "name": ""
+    },
+    "523": {
+      "key": 85,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "921": {
+      "key": 50,
+      "modifier": 0,
+      "char_code": 50,
+      "name": "1/2 Note"
+    },
+    "87": {
+      "key": 13,
+      "modifier": 5,
+      "char_code": 13,
+      "name": ""
+    },
+    "41": {
+      "key": 28,
+      "modifier": 32,
+      "char_code": 63234,
+      "name": ""
+    },
+    "524": {
+      "key": 86,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1377": {
+      "key": 45,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "2958": {
+      "key": 10,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "425": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "88": {
+      "key": 8,
+      "modifier": 32,
+      "char_code": 127,
+      "name": ""
+    },
+    "251": {
+      "key": 110,
+      "modifier": 13,
+      "char_code": 110,
+      "name": "Settings: Numbers and Names"
+    },
+    "2971": {
+      "key": 123,
+      "modifier": 37,
+      "char_code": 0,
+      "name": "Hide Subrows for All Rows"
+    },
+    "1390": {
+      "key": 11,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "89": {
+      "key": 8,
+      "modifier": 33,
+      "char_code": 127,
+      "name": ""
+    },
+    "922": {
+      "key": 51,
+      "modifier": 0,
+      "char_code": 51,
+      "name": "1/4 Note"
+    },
+    "42": {
+      "key": 29,
+      "modifier": 32,
+      "char_code": 63235,
+      "name": ""
+    },
+    "252": {
+      "key": 103,
+      "modifier": 13,
+      "char_code": 103,
+      "name": "Settings: Guitar Tablature"
+    },
+    "426": {
+      "key": 105,
+      "modifier": 5,
+      "char_code": 105,
+      "name": ""
+    },
+    "43": {
+      "key": 30,
+      "modifier": 32,
+      "char_code": 63232,
+      "name": ""
+    },
+    "44": {
+      "key": 31,
+      "modifier": 32,
+      "char_code": 63233,
+      "name": ""
+    },
+    "923": {
+      "key": 52,
+      "modifier": 0,
+      "char_code": 52,
+      "name": "1/8 Note"
+    },
+    "525": {
+      "key": 87,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "650": {
+      "key": 110,
+      "modifier": 40,
+      "char_code": 110,
+      "name": ""
+    },
+    "228": {
+      "key": 30,
+      "modifier": 13,
+      "char_code": 63232,
+      "name": ""
+    },
+    "2959": {
+      "key": 124,
+      "modifier": 40,
+      "char_code": 0,
+      "name": "Selection Start and End to Next Transient and Play"
+    },
+    "45": {
+      "key": 105,
+      "modifier": 0,
+      "char_code": 105,
+      "name": ""
+    },
+    "129": {
+      "key": 114,
+      "modifier": 41,
+      "char_code": 114,
+      "name": "Move Region to Recorded Position"
+    },
+    "427": {
+      "key": 114,
+      "modifier": 5,
+      "char_code": 114,
+      "name": ""
+    },
+    "2972": {
+      "key": 8,
+      "modifier": 40,
+      "char_code": 127,
+      "name": ""
+    },
+    "154": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "924": {
+      "key": 53,
+      "modifier": 0,
+      "char_code": 53,
+      "name": "1/16 Note"
+    },
+    "651": {
+      "key": 8,
+      "modifier": 32,
+      "char_code": 127,
+      "name": ""
+    },
+    "229": {
+      "key": 31,
+      "modifier": 13,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1740": {
+      "key": 116,
+      "modifier": 1,
+      "char_code": 116,
+      "name": "Text Tool"
+    },
+    "254": {
+      "key": 111,
+      "modifier": 13,
+      "char_code": 111,
+      "name": "Settings: Score Colors"
+    },
+    "428": {
+      "key": 116,
+      "modifier": 5,
+      "char_code": 116,
+      "name": ""
+    },
+    "46": {
+      "key": 11,
+      "modifier": 0,
+      "char_code": 63276,
+      "name": ""
+    },
+    "47": {
+      "key": 12,
+      "modifier": 0,
+      "char_code": 63277,
+      "name": ""
+    },
+    "925": {
+      "key": 54,
+      "modifier": 0,
+      "char_code": 54,
+      "name": "1/32 Note"
+    },
+    "180": {
+      "key": 8,
+      "modifier": 32,
+      "char_code": 127,
+      "name": ""
+    },
+    "354": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "48": {
+      "key": 1,
+      "modifier": 0,
+      "char_code": 63273,
+      "name": ""
+    },
+    "49": {
+      "key": 4,
+      "modifier": 0,
+      "char_code": 63275,
+      "name": ""
+    },
+    "255": {
+      "key": 108,
+      "modifier": 13,
+      "char_code": 108,
+      "name": "Settings: Clefs and Signatures"
+    },
+    "429": {
+      "key": 12,
+      "modifier": 0,
+      "char_code": 63277,
+      "name": ""
+    },
+    "2079": {
+      "key": 115,
+      "modifier": 44,
+      "char_code": 115,
+      "name": ""
+    },
+    "2973": {
+      "key": 127,
+      "modifier": 41,
+      "char_code": 127,
+      "name": ""
+    },
+    "553": {
+      "key": 106,
+      "modifier": 0,
+      "char_code": 106,
+      "name": ""
+    },
+    "1728": {
+      "key": 100,
+      "modifier": 32,
+      "char_code": 100,
+      "name": ""
+    },
+    "355": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1741": {
+      "key": 8,
+      "modifier": 9,
+      "char_code": 127,
+      "name": ""
+    },
+    "926": {
+      "key": 55,
+      "modifier": 0,
+      "char_code": 55,
+      "name": "1/64 Note"
+    },
+    "256": {
+      "key": 112,
+      "modifier": 36,
+      "char_code": 112,
+      "name": ""
+    },
+    "554": {
+      "key": 121,
+      "modifier": 33,
+      "char_code": 121,
+      "name": "Automation: Display Off"
+    },
+    "751": {
+      "key": 110,
+      "modifier": 32,
+      "char_code": 110,
+      "name": "New from Template\u2026"
+    },
+    "752": {
+      "key": 111,
+      "modifier": 32,
+      "char_code": 111,
+      "name": "Open\u2026"
+    },
+    "927": {
+      "key": 56,
+      "modifier": 0,
+      "char_code": 56,
+      "name": "1/128 Note"
+    },
+    "182": {
+      "key": 115,
+      "modifier": 4,
+      "char_code": 115,
+      "name": ""
+    },
+    "356": {
+      "key": 28,
+      "modifier": 1,
+      "char_code": 63234,
+      "name": ""
+    },
+    "654": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "381": {
+      "key": 113,
+      "modifier": 40,
+      "char_code": 113,
+      "name": "Dequantize"
+    },
+    "257": {
+      "key": 99,
+      "modifier": 5,
+      "char_code": 99,
+      "name": "Assign MIDI Channels based on Score Split"
+    },
+    "2974": {
+      "key": 124,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "Shift selected Zones/Groups Right (Zones incl. Root Key)"
+    },
+    "1729": {
+      "key": 102,
+      "modifier": 44,
+      "char_code": 102,
+      "name": "Pack Take Folder"
+    },
+    "753": {
+      "key": 119,
+      "modifier": 40,
+      "char_code": 119,
+      "name": "Close Project"
+    },
+    "754": {
+      "key": 115,
+      "modifier": 32,
+      "char_code": 115,
+      "name": "Save"
+    },
+    "528": {
+      "key": 143,
+      "modifier": 12,
+      "char_code": 232,
+      "name": ""
+    },
+    "357": {
+      "key": 29,
+      "modifier": 1,
+      "char_code": 63235,
+      "name": ""
+    },
+    "655": {
+      "key": 118,
+      "modifier": 4,
+      "char_code": 118,
+      "name": ""
+    },
+    "529": {
+      "key": 119,
+      "modifier": 32,
+      "char_code": 119,
+      "name": ""
+    },
+    "258": {
+      "key": 8,
+      "modifier": 5,
+      "char_code": 127,
+      "name": ""
+    },
+    "581": {
+      "key": 13,
+      "modifier": 4,
+      "char_code": 13,
+      "name": ""
+    },
+    "482": {
+      "key": 115,
+      "modifier": 8,
+      "char_code": 115,
+      "name": "Clear/Recall Solo"
+    },
+    "358": {
+      "key": 136,
+      "modifier": 0,
+      "char_code": 224,
+      "name": ""
+    },
+    "383": {
+      "key": 118,
+      "modifier": 33,
+      "char_code": 118,
+      "name": "Paste Replace"
+    },
+    "2975": {
+      "key": 123,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "Shift selected Zones/Groups Left (Zones incl. Root Key)"
+    },
+    "582": {
+      "key": 102,
+      "modifier": 40,
+      "char_code": 102,
+      "name": "Convert Regions to New Audio Files\u2026"
+    },
+    "880": {
+      "key": 45,
+      "modifier": 0,
+      "char_code": 45,
+      "name": "Voice Separation Tool"
+    },
+    "483": {
+      "key": 99,
+      "modifier": 8,
+      "char_code": 99,
+      "name": "Show/Hide Colors"
+    },
+    "359": {
+      "key": 136,
+      "modifier": 1,
+      "char_code": 224,
+      "name": ""
+    },
+    "682": {
+      "key": 1,
+      "modifier": 4,
+      "char_code": 63273,
+      "name": ""
+    },
+    "558": {
+      "key": 121,
+      "modifier": 8,
+      "char_code": 121,
+      "name": "Set Next Tool or Edit Mode"
+    },
+    "583": {
+      "key": 119,
+      "modifier": 1,
+      "char_code": 119,
+      "name": "Open in External Sample Editor"
+    },
+    "881": {
+      "key": 43,
+      "modifier": 1,
+      "char_code": 43,
+      "name": "Decrease Last Clicked Parameter by 10"
+    },
+    "757": {
+      "key": 112,
+      "modifier": 32,
+      "char_code": 112,
+      "name": "Print"
+    },
+    "484": {
+      "key": 103,
+      "modifier": 9,
+      "char_code": 103,
+      "name": ""
+    },
+    "658": {
+      "key": 97,
+      "modifier": 4,
+      "char_code": 97,
+      "name": ""
+    },
+    "2976": {
+      "key": 27,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "683": {
+      "key": 3,
+      "modifier": 1,
+      "char_code": 3,
+      "name": ""
+    },
+    "584": {
+      "key": 116,
+      "modifier": 5,
+      "char_code": 116,
+      "name": ""
+    },
+    "882": {
+      "key": 45,
+      "modifier": 1,
+      "char_code": 45,
+      "name": ""
+    },
+    "1744": {
+      "key": 116,
+      "modifier": 8,
+      "char_code": 116,
+      "name": "Configure Track Header\u2026"
+    },
+    "758": {
+      "key": 105,
+      "modifier": 32,
+      "char_code": 105,
+      "name": "Import\u2026"
+    },
+    "585": {
+      "key": 157,
+      "modifier": 8,
+      "char_code": 249,
+      "name": ""
+    },
+    "883": {
+      "key": 103,
+      "modifier": 8,
+      "char_code": 103,
+      "name": "Configure Global Tracks\u2026"
+    },
+    "759": {
+      "key": 101,
+      "modifier": 40,
+      "char_code": 101,
+      "name": "Export Selection as MIDI File\u2026"
+    },
+    "486": {
+      "key": 114,
+      "modifier": 0,
+      "char_code": 114,
+      "name": ""
+    },
+    "2977": {
+      "key": 1,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1212": {
+      "key": 147,
+      "modifier": 0,
+      "char_code": 236,
+      "name": ""
+    },
+    "884": {
+      "key": 60,
+      "modifier": 4,
+      "char_code": 60,
+      "name": ""
+    },
+    "1745": {
+      "key": 113,
+      "modifier": 8,
+      "char_code": 113,
+      "name": "Toggle Take Folder Quick Swipe Comping Mode"
+    },
+    "487": {
+      "key": 55,
+      "modifier": 32,
+      "char_code": 55,
+      "name": "Open Event List\u2026"
+    },
+    "785": {
+      "key": 110,
+      "modifier": 33,
+      "char_code": 110,
+      "name": "New Empty Project"
+    },
+    "686": {
+      "key": 49,
+      "modifier": 32,
+      "char_code": 49,
+      "name": "Open Main Window\u2026"
+    },
+    "587": {
+      "key": 109,
+      "modifier": 1,
+      "char_code": 109,
+      "name": ""
+    },
+    "488": {
+      "key": 53,
+      "modifier": 32,
+      "char_code": 53,
+      "name": "Open Score Editor\u2026"
+    },
+    "2978": {
+      "key": 9,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1213": {
+      "key": 39,
+      "modifier": 0,
+      "char_code": 39,
+      "name": "Toggle Selected Step"
+    },
+    "2991": {
+      "key": 30,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "588": {
+      "key": 99,
+      "modifier": 1,
+      "char_code": 99,
+      "name": ""
+    },
+    "886": {
+      "key": 120,
+      "modifier": 33,
+      "char_code": 120,
+      "name": ""
+    },
+    "489": {
+      "key": 52,
+      "modifier": 32,
+      "char_code": 52,
+      "name": "Open Piano Roll\u2026"
+    },
+    "589": {
+      "key": 31,
+      "modifier": 40,
+      "char_code": 63233,
+      "name": ""
+    },
+    "887": {
+      "key": 111,
+      "modifier": 33,
+      "char_code": 111,
+      "name": "Show/Hide Movie Track"
+    },
+    "2979": {
+      "key": 5,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1810": {
+      "key": 97,
+      "modifier": 4,
+      "char_code": 97,
+      "name": ""
+    },
+    "1214": {
+      "key": 147,
+      "modifier": 1,
+      "char_code": 236,
+      "name": ""
+    },
+    "2992": {
+      "key": 44,
+      "modifier": 5,
+      "char_code": 0,
+      "name": "Insert: Crescendo"
+    },
+    "888": {
+      "key": 107,
+      "modifier": 33,
+      "char_code": 107,
+      "name": "Show/Hide Marker Track"
+    },
+    "3096": {
+      "key": 108,
+      "modifier": 32,
+      "char_code": 108,
+      "name": "Learn new Controller Assignment"
+    },
+    "1215": {
+      "key": 39,
+      "modifier": 1,
+      "char_code": 39,
+      "name": "Rename Marker"
+    },
+    "2993": {
+      "key": 126,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1748": {
+      "key": 98,
+      "modifier": 4,
+      "char_code": 98,
+      "name": ""
+    },
+    "1761": {
+      "key": 143,
+      "modifier": 5,
+      "char_code": 232,
+      "name": ""
+    },
+    "1216": {
+      "key": 99,
+      "modifier": 40,
+      "char_code": 99,
+      "name": "Copy Channel Strip Setting"
+    },
+    "2994": {
+      "key": 125,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1749": {
+      "key": 98,
+      "modifier": 36,
+      "char_code": 98,
+      "name": "Bounce Tracks in Place"
+    },
+    "2810": {
+      "key": 6,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1762": {
+      "key": 43,
+      "modifier": 5,
+      "char_code": 43,
+      "name": ""
+    },
+    "1813": {
+      "key": 28,
+      "modifier": 13,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1217": {
+      "key": 118,
+      "modifier": 40,
+      "char_code": 118,
+      "name": "Paste Channel Strip Setting"
+    },
+    "1763": {
+      "key": 143,
+      "modifier": 4,
+      "char_code": 232,
+      "name": ""
+    },
+    "1814": {
+      "key": 29,
+      "modifier": 13,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1231": {
+      "key": 109,
+      "modifier": 0,
+      "char_code": 109,
+      "name": ""
+    },
+    "1764": {
+      "key": 43,
+      "modifier": 4,
+      "char_code": 43,
+      "name": ""
+    },
+    "1815": {
+      "key": 28,
+      "modifier": 8,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1232": {
+      "key": 115,
+      "modifier": 0,
+      "char_code": 115,
+      "name": ""
+    },
+    "1765": {
+      "key": 111,
+      "modifier": 5,
+      "char_code": 111,
+      "name": ""
+    },
+    "1816": {
+      "key": 29,
+      "modifier": 8,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1817": {
+      "key": 28,
+      "modifier": 1,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1234": {
+      "key": 34,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "1830": {
+      "key": 29,
+      "modifier": 40,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1780": {
+      "key": 23,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1818": {
+      "key": 29,
+      "modifier": 1,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1235": {
+      "key": 115,
+      "modifier": 5,
+      "char_code": 115,
+      "name": "Solo Row"
+    },
+    "1831": {
+      "key": 13,
+      "modifier": 1,
+      "char_code": 13,
+      "name": ""
+    },
+    "1781": {
+      "key": 22,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1001": {
+      "key": 18,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1819": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1832": {
+      "key": 45,
+      "modifier": 40,
+      "char_code": 0,
+      "name": "Decrement Loop End for Row"
+    },
+    "1186": {
+      "key": 105,
+      "modifier": 33,
+      "char_code": 105,
+      "name": "Import Audio File\u2026"
+    },
+    "1782": {
+      "key": 26,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1002": {
+      "key": 19,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1833": {
+      "key": 2,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "1783": {
+      "key": 28,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1301": {
+      "key": 49,
+      "modifier": 36,
+      "char_code": 49,
+      "name": "Create 1 Track Automation Point at Every Region Border"
+    },
+    "1003": {
+      "key": 20,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1834": {
+      "key": 7,
+      "modifier": 40,
+      "char_code": 0,
+      "name": ""
+    },
+    "1784": {
+      "key": 25,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1600": {
+      "key": 116,
+      "modifier": 36,
+      "char_code": 116,
+      "name": "Search and Select Track\u2026"
+    },
+    "1302": {
+      "key": 50,
+      "modifier": 36,
+      "char_code": 50,
+      "name": "Create 2 Track Automation Points at Every Region Border"
+    },
+    "1004": {
+      "key": 21,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1835": {
+      "key": 7,
+      "modifier": 41,
+      "char_code": 0,
+      "name": ""
+    },
+    "1252": {
+      "key": 109,
+      "modifier": 32,
+      "char_code": 109,
+      "name": "Minimize Window"
+    },
+    "1785": {
+      "key": 30,
+      "modifier": 1,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1005": {
+      "key": 23,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1836": {
+      "key": 5,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "1253": {
+      "key": 102,
+      "modifier": 0,
+      "char_code": 102,
+      "name": ""
+    },
+    "1786": {
+      "key": 31,
+      "modifier": 1,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1602": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1304": {
+      "key": 107,
+      "modifier": 32,
+      "char_code": 107,
+      "name": "Show/Hide Musical Typing\u2026"
+    },
+    "1006": {
+      "key": 22,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1900": {
+      "key": 114,
+      "modifier": 33,
+      "char_code": 114,
+      "name": "Randomize Current Edit Mode Values for All Rows"
+    },
+    "1539": {
+      "key": 8,
+      "modifier": 13,
+      "char_code": 127,
+      "name": ""
+    },
+    "1837": {
+      "key": 6,
+      "modifier": 13,
+      "char_code": 0,
+      "name": ""
+    },
+    "1254": {
+      "key": 100,
+      "modifier": 0,
+      "char_code": 100,
+      "name": ""
+    },
+    "1603": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1007": {
+      "key": 26,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1901": {
+      "key": 29,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1020": {
+      "key": 114,
+      "modifier": 37,
+      "char_code": 114,
+      "name": "Set All Tracks to Automation Read"
+    },
+    "70": {
+      "key": 12,
+      "modifier": 8,
+      "char_code": 63277,
+      "name": ""
+    },
+    "1838": {
+      "key": 6,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1255": {
+      "key": 118,
+      "modifier": 0,
+      "char_code": 118,
+      "name": "Velocity Tool"
+    },
+    "71": {
+      "key": 11,
+      "modifier": 8,
+      "char_code": 63276,
+      "name": ""
+    },
+    "72": {
+      "key": 105,
+      "modifier": 8,
+      "char_code": 105,
+      "name": "Toggle MIDI In (Step Record)"
+    },
+    "1604": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1008": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1902": {
+      "key": 136,
+      "modifier": 32,
+      "char_code": 224,
+      "name": ""
+    },
+    "1021": {
+      "key": 116,
+      "modifier": 37,
+      "char_code": 116,
+      "name": "Set All Tracks to Automation Touch"
+    },
+    "1256": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "1789": {
+      "key": 110,
+      "modifier": 41,
+      "char_code": 110,
+      "name": "Name Tracks by Region/Cell Name"
+    },
+    "2850": {
+      "key": 15,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "1605": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "76": {
+      "key": 122,
+      "modifier": 9,
+      "char_code": 122,
+      "name": "Navigation: Forward"
+    },
+    "30": {
+      "key": 44,
+      "modifier": 32,
+      "char_code": 44,
+      "name": "Open Settings\u2026"
+    },
+    "1009": {
+      "key": 25,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1022": {
+      "key": 108,
+      "modifier": 37,
+      "char_code": 108,
+      "name": "Set All Tracks to Automation Latch"
+    },
+    "1903": {
+      "key": 32,
+      "modifier": 8,
+      "char_code": 32,
+      "name": "Preview Selected Zone"
+    },
+    "77": {
+      "key": 122,
+      "modifier": 5,
+      "char_code": 122,
+      "name": ""
+    },
+    "2007": {
+      "key": 120,
+      "modifier": 1,
+      "char_code": 120,
+      "name": "Octave + 2"
+    },
+    "32": {
+      "key": 115,
+      "modifier": 33,
+      "char_code": 115,
+      "name": "Save Project as\u2026"
+    },
+    "78": {
+      "key": 122,
+      "modifier": 8,
+      "char_code": 122,
+      "name": "Navigation: Back"
+    },
+    "33": {
+      "key": 15,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "Region"
+    },
+    "2255": {
+      "key": 116,
+      "modifier": 40,
+      "char_code": 116,
+      "name": ""
+    },
+    "1606": {
+      "key": 115,
+      "modifier": 4,
+      "char_code": 115,
+      "name": ""
+    },
+    "79": {
+      "key": 122,
+      "modifier": 1,
+      "char_code": 122,
+      "name": ""
+    },
+    "2851": {
+      "key": 35,
+      "modifier": 33,
+      "char_code": 0,
+      "name": ""
+    },
+    "1904": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "2008": {
+      "key": 110,
+      "modifier": 4,
+      "char_code": 110,
+      "name": ""
+    },
+    "35": {
+      "key": 107,
+      "modifier": 8,
+      "char_code": 107,
+      "name": "Open Key Command Assignments\u2026"
+    },
+    "1258": {
+      "key": 49,
+      "modifier": 37,
+      "char_code": 49,
+      "name": "Create 1 Track Automation Point at Region Borders"
+    },
+    "2021": {
+      "key": 99,
+      "modifier": 44,
+      "char_code": 99,
+      "name": ""
+    },
+    "3900": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "1607": {
+      "key": 101,
+      "modifier": 4,
+      "char_code": 101,
+      "name": ""
+    },
+    "1905": {
+      "key": 35,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "SBProcs"
+    },
+    "1620": {
+      "key": 97,
+      "modifier": 4,
+      "char_code": 97,
+      "name": ""
+    },
+    "2009": {
+      "key": 100,
+      "modifier": 9,
+      "char_code": 100,
+      "name": ""
+    },
+    "3": {
+      "key": 76,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1259": {
+      "key": 50,
+      "modifier": 37,
+      "char_code": 50,
+      "name": "Create 2 Track Automation Points at Region Borders"
+    },
+    "4": {
+      "key": 65,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2022": {
+      "key": 118,
+      "modifier": 44,
+      "char_code": 118,
+      "name": ""
+    },
+    "1272": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "5": {
+      "key": 82,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "39": {
+      "key": 116,
+      "modifier": 9,
+      "char_code": 116,
+      "name": "Open Tempo List\u2026"
+    },
+    "2320": {
+      "key": 101,
+      "modifier": 0,
+      "char_code": 101,
+      "name": ""
+    },
+    "1608": {
+      "key": 100,
+      "modifier": 4,
+      "char_code": 100,
+      "name": ""
+    },
+    "1906": {
+      "key": 35,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "100": {
+      "key": 117,
+      "modifier": 32,
+      "char_code": 117,
+      "name": "Set Locators/Loop by Regions/Events/Marquee and Enable Cycle/Loop"
+    },
+    "7": {
+      "key": 114,
+      "modifier": 0,
+      "char_code": 114,
+      "name": ""
+    },
+    "1621": {
+      "key": 102,
+      "modifier": 5,
+      "char_code": 102,
+      "name": ""
+    },
+    "8": {
+      "key": 67,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "200": {
+      "key": 102,
+      "modifier": 4,
+      "char_code": 102,
+      "name": ""
+    },
+    "9": {
+      "key": 46,
+      "modifier": 32,
+      "char_code": 46,
+      "name": ""
+    },
+    "101": {
+      "key": 110,
+      "modifier": 4,
+      "char_code": 110,
+      "name": ""
+    },
+    "2321": {
+      "key": 46,
+      "modifier": 1,
+      "char_code": 0,
+      "name": ""
+    },
+    "1273": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "300": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "3902": {
+      "key": 108,
+      "modifier": 4,
+      "char_code": 108,
+      "name": ""
+    },
+    "1609": {
+      "key": 46,
+      "modifier": 32,
+      "char_code": 46,
+      "name": ""
+    },
+    "201": {
+      "key": 120,
+      "modifier": 4,
+      "char_code": 120,
+      "name": ""
+    },
+    "102": {
+      "key": 113,
+      "modifier": 4,
+      "char_code": 113,
+      "name": "Apply Quantization Permanently"
+    },
+    "1622": {
+      "key": 117,
+      "modifier": 4,
+      "char_code": 117,
+      "name": ""
+    },
+    "400": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "301": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "202": {
+      "key": 112,
+      "modifier": 4,
+      "char_code": 112,
+      "name": ""
+    },
+    "2322": {
+      "key": 116,
+      "modifier": 0,
+      "char_code": 116,
+      "name": ""
+    },
+    "103": {
+      "key": 108,
+      "modifier": 4,
+      "char_code": 108,
+      "name": ""
+    },
+    "1274": {
+      "key": 101,
+      "modifier": 0,
+      "char_code": 101,
+      "name": ""
+    },
+    "401": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "302": {
+      "key": 114,
+      "modifier": 12,
+      "char_code": 114,
+      "name": "Set Global Edit Mode to Note Repeat"
+    },
+    "104": {
+      "key": 157,
+      "modifier": 4,
+      "char_code": 249,
+      "name": ""
+    },
+    "1623": {
+      "key": 109,
+      "modifier": 5,
+      "char_code": 109,
+      "name": ""
+    },
+    "402": {
+      "key": 32,
+      "modifier": 0,
+      "char_code": 32,
+      "name": ""
+    },
+    "303": {
+      "key": 97,
+      "modifier": 5,
+      "char_code": 97,
+      "name": "Length as Absolute Position"
+    },
+    "1040": {
+      "key": 115,
+      "modifier": 44,
+      "char_code": 115,
+      "name": "Sends on Faders - Cycle Through Sends"
+    },
+    "700": {
+      "key": 44,
+      "modifier": 33,
+      "char_code": 44,
+      "name": "Move Locators Backwards by Cycle Length / Loop Backwards by Loop Length"
+    },
+    "204": {
+      "key": 152,
+      "modifier": 4,
+      "char_code": 242,
+      "name": ""
+    },
+    "2323": {
+      "key": 115,
+      "modifier": 0,
+      "char_code": 115,
+      "name": ""
+    },
+    "105": {
+      "key": 157,
+      "modifier": 0,
+      "char_code": 249,
+      "name": ""
+    },
+    "1573": {
+      "key": 49,
+      "modifier": 12,
+      "char_code": 49,
+      "name": "Set Nudge Value to 1 ms"
+    },
+    "403": {
+      "key": 102,
+      "modifier": 4,
+      "char_code": 102,
+      "name": ""
+    },
+    "900": {
+      "key": 97,
+      "modifier": 0,
+      "char_code": 97,
+      "name": ""
+    },
+    "701": {
+      "key": 115,
+      "modifier": 9,
+      "char_code": 115,
+      "name": ""
+    },
+    "2273": {
+      "key": 102,
+      "modifier": 4,
+      "char_code": 102,
+      "name": ""
+    },
+    "230": {
+      "key": 98,
+      "modifier": 4,
+      "char_code": 98,
+      "name": ""
+    },
+    "106": {
+      "key": 157,
+      "modifier": 1,
+      "char_code": 249,
+      "name": ""
+    },
+    "404": {
+      "key": 114,
+      "modifier": 4,
+      "char_code": 114,
+      "name": ""
+    },
+    "305": {
+      "key": 100,
+      "modifier": 5,
+      "char_code": 100,
+      "name": "Articulation"
+    },
+    "1041": {
+      "key": 109,
+      "modifier": 5,
+      "char_code": 109,
+      "name": ""
+    },
+    "901": {
+      "key": 119,
+      "modifier": 0,
+      "char_code": 119,
+      "name": ""
+    },
+    "2324": {
+      "key": 112,
+      "modifier": 0,
+      "char_code": 112,
+      "name": ""
+    },
+    "231": {
+      "key": 117,
+      "modifier": 4,
+      "char_code": 117,
+      "name": ""
+    },
+    "405": {
+      "key": 97,
+      "modifier": 0,
+      "char_code": 97,
+      "name": ""
+    },
+    "430": {
+      "key": 32,
+      "modifier": 44,
+      "char_code": 32,
+      "name": ""
+    },
+    "902": {
+      "key": 115,
+      "modifier": 0,
+      "char_code": 115,
+      "name": ""
+    },
+    "2857": {
+      "key": 37,
+      "modifier": 40,
+      "char_code": 0,
+      "name": ""
+    },
+    "505": {
+      "key": 105,
+      "modifier": 44,
+      "char_code": 105,
+      "name": "Set Punch In Locator by Playhead"
+    },
+    "2274": {
+      "key": 29,
+      "modifier": 36,
+      "char_code": 63235,
+      "name": ""
+    },
+    "232": {
+      "key": 100,
+      "modifier": 4,
+      "char_code": 100,
+      "name": ""
+    },
+    "903": {
+      "key": 101,
+      "modifier": 0,
+      "char_code": 101,
+      "name": ""
+    },
+    "332": {
+      "key": 29,
+      "modifier": 8,
+      "char_code": 63235,
+      "name": ""
+    },
+    "208": {
+      "key": 110,
+      "modifier": 5,
+      "char_code": 110,
+      "name": "Show/Hide Instrument Names"
+    },
+    "506": {
+      "key": 111,
+      "modifier": 44,
+      "char_code": 111,
+      "name": "Set Punch Out Locator by Playhead"
+    },
+    "2325": {
+      "key": 104,
+      "modifier": 0,
+      "char_code": 104,
+      "name": ""
+    },
+    "407": {
+      "key": 117,
+      "modifier": 1,
+      "char_code": 117,
+      "name": ""
+    },
+    "2858": {
+      "key": 2,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "432": {
+      "key": 1,
+      "modifier": 4,
+      "char_code": 63273,
+      "name": ""
+    },
+    "904": {
+      "key": 100,
+      "modifier": 0,
+      "char_code": 100,
+      "name": ""
+    },
+    "1290": {
+      "key": 39,
+      "modifier": 4,
+      "char_code": 39,
+      "name": ""
+    },
+    "333": {
+      "key": 28,
+      "modifier": 8,
+      "char_code": 63234,
+      "name": ""
+    },
+    "209": {
+      "key": 114,
+      "modifier": 5,
+      "char_code": 114,
+      "name": "Reverse"
+    },
+    "2275": {
+      "key": 28,
+      "modifier": 36,
+      "char_code": 63234,
+      "name": ""
+    },
+    "408": {
+      "key": 8,
+      "modifier": 32,
+      "char_code": 127,
+      "name": ""
+    },
+    "1043": {
+      "key": 30,
+      "modifier": 36,
+      "char_code": 63232,
+      "name": ""
+    },
+    "433": {
+      "key": 4,
+      "modifier": 4,
+      "char_code": 63275,
+      "name": ""
+    },
+    "607": {
+      "key": 32,
+      "modifier": 5,
+      "char_code": 32,
+      "name": "Play/Stop Region"
+    },
+    "905": {
+      "key": 102,
+      "modifier": 0,
+      "char_code": 102,
+      "name": ""
+    },
+    "731": {
+      "key": 118,
+      "modifier": 8,
+      "char_code": 118,
+      "name": "Toggle Keyboard/Group/Zone View"
+    },
+    "334": {
+      "key": 116,
+      "modifier": 12,
+      "char_code": 116,
+      "name": "Set Global Edit Mode to Tie"
+    },
+    "632": {
+      "key": 122,
+      "modifier": 4,
+      "char_code": 122,
+      "name": ""
+    },
+    "2326": {
+      "key": 109,
+      "modifier": 0,
+      "char_code": 109,
+      "name": ""
+    },
+    "2859": {
+      "key": 2,
+      "modifier": 13,
+      "char_code": 0,
+      "name": ""
+    },
+    "1291": {
+      "key": 107,
+      "modifier": 1,
+      "char_code": 107,
+      "name": "Toggle Count-in"
+    },
+    "434": {
+      "key": 114,
+      "modifier": 4,
+      "char_code": 114,
+      "name": ""
+    },
+    "608": {
+      "key": 28,
+      "modifier": 5,
+      "char_code": 63234,
+      "name": ""
+    },
+    "2872": {
+      "key": 126,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "906": {
+      "key": 116,
+      "modifier": 0,
+      "char_code": 116,
+      "name": ""
+    },
+    "509": {
+      "key": 105,
+      "modifier": 45,
+      "char_code": 105,
+      "name": "Set Punch In Locator by Rounded Playhead"
+    },
+    "335": {
+      "key": 100,
+      "modifier": 12,
+      "char_code": 100,
+      "name": "Set Nudge Value to Division"
+    },
+    "633": {
+      "key": 103,
+      "modifier": 4,
+      "char_code": 103,
+      "name": ""
+    },
+    "1044": {
+      "key": 31,
+      "modifier": 36,
+      "char_code": 63233,
+      "name": ""
+    },
+    "409": {
+      "key": 111,
+      "modifier": 4,
+      "char_code": 111,
+      "name": ""
+    },
+    "435": {
+      "key": 115,
+      "modifier": 4,
+      "char_code": 115,
+      "name": ""
+    },
+    "609": {
+      "key": 29,
+      "modifier": 5,
+      "char_code": 63235,
+      "name": ""
+    },
+    "907": {
+      "key": 103,
+      "modifier": 0,
+      "char_code": 103,
+      "name": ""
+    },
+    "336": {
+      "key": 98,
+      "modifier": 12,
+      "char_code": 98,
+      "name": "Set Nudge Value to Beat"
+    },
+    "634": {
+      "key": 109,
+      "modifier": 4,
+      "char_code": 109,
+      "name": ""
+    },
+    "361": {
+      "key": 11,
+      "modifier": 32,
+      "char_code": 63276,
+      "name": ""
+    },
+    "535": {
+      "key": 32,
+      "modifier": 0,
+      "char_code": 32,
+      "name": ""
+    },
+    "2340": {
+      "key": 98,
+      "modifier": 0,
+      "char_code": 98,
+      "name": ""
+    },
+    "560": {
+      "key": 99,
+      "modifier": 9,
+      "char_code": 99,
+      "name": "Color Regions/Cells by Track Color"
+    },
+    "436": {
+      "key": 112,
+      "modifier": 4,
+      "char_code": 112,
+      "name": ""
+    },
+    "2873": {
+      "key": 125,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "908": {
+      "key": 121,
+      "modifier": 0,
+      "char_code": 121,
+      "name": ""
+    },
+    "337": {
+      "key": 109,
+      "modifier": 12,
+      "char_code": 109,
+      "name": "Set Nudge Value to Bar"
+    },
+    "1628": {
+      "key": 32,
+      "modifier": 0,
+      "char_code": 32,
+      "name": ""
+    },
+    "362": {
+      "key": 12,
+      "modifier": 32,
+      "char_code": 63277,
+      "name": ""
+    },
+    "1045": {
+      "key": 30,
+      "modifier": 37,
+      "char_code": 63232,
+      "name": ""
+    },
+    "635": {
+      "key": 115,
+      "modifier": 41,
+      "char_code": 115,
+      "name": ""
+    },
+    "2276": {
+      "key": 114,
+      "modifier": 32,
+      "char_code": 114,
+      "name": "Repeat Step"
+    },
+    "735": {
+      "key": 120,
+      "modifier": 0,
+      "char_code": 120,
+      "name": ""
+    },
+    "909": {
+      "key": 104,
+      "modifier": 0,
+      "char_code": 104,
+      "name": ""
+    },
+    "760": {
+      "key": 113,
+      "modifier": 32,
+      "char_code": 113,
+      "name": "Quit"
+    },
+    "338": {
+      "key": 102,
+      "modifier": 12,
+      "char_code": 102,
+      "name": "Set Global Edit Mode to Start Offset"
+    },
+    "1578": {
+      "key": 48,
+      "modifier": 12,
+      "char_code": 48,
+      "name": "Set Nudge Value to 10 ms"
+    },
+    "363": {
+      "key": 104,
+      "modifier": 1,
+      "char_code": 104,
+      "name": "Select Same Channels"
+    },
+    "239": {
+      "key": 51,
+      "modifier": 1,
+      "char_code": 51,
+      "name": "Next note will be sharp"
+    },
+    "1293": {
+      "key": 39,
+      "modifier": 33,
+      "char_code": 39,
+      "name": ""
+    },
+    "2277": {
+      "key": 11,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "2874": {
+      "key": 123,
+      "modifier": 0,
+      "char_code": 0,
+      "name": "Step Backwards"
+    },
+    "736": {
+      "key": 110,
+      "modifier": 0,
+      "char_code": 110,
+      "name": ""
+    },
+    "761": {
+      "key": 122,
+      "modifier": 32,
+      "char_code": 122,
+      "name": "Undo"
+    },
+    "339": {
+      "key": 104,
+      "modifier": 12,
+      "char_code": 104,
+      "name": "Set Nudge Value to 0.5 SMPTE Frame"
+    },
+    "1629": {
+      "key": 30,
+      "modifier": 33,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1046": {
+      "key": 31,
+      "modifier": 37,
+      "char_code": 63233,
+      "name": ""
+    },
+    "364": {
+      "key": 60,
+      "modifier": 1,
+      "char_code": 60,
+      "name": ""
+    },
+    "960": {
+      "key": 60,
+      "modifier": 1,
+      "char_code": 60,
+      "name": ""
+    },
+    "2278": {
+      "key": 8,
+      "modifier": 5,
+      "char_code": 127,
+      "name": ""
+    },
+    "439": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "290": {
+      "key": 60,
+      "modifier": 8,
+      "char_code": 60,
+      "name": ""
+    },
+    "762": {
+      "key": 120,
+      "modifier": 32,
+      "char_code": 120,
+      "name": "Cut"
+    },
+    "161": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "191": {
+      "key": 28,
+      "modifier": 1,
+      "char_code": 63234,
+      "name": ""
+    },
+    "663": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "961": {
+      "key": 60,
+      "modifier": 0,
+      "char_code": 60,
+      "name": ""
+    },
+    "162": {
+      "key": 29,
+      "modifier": 1,
+      "char_code": 63235,
+      "name": ""
+    },
+    "2875": {
+      "key": 124,
+      "modifier": 0,
+      "char_code": 0,
+      "name": "Step Forward"
+    },
+    "2577": {
+      "key": 36,
+      "modifier": 0,
+      "char_code": 0,
+      "name": "Trigger Cells or Scene"
+    },
+    "291": {
+      "key": 60,
+      "modifier": 9,
+      "char_code": 60,
+      "name": ""
+    },
+    "763": {
+      "key": 99,
+      "modifier": 32,
+      "char_code": 99,
+      "name": "Copy"
+    },
+    "2590": {
+      "key": 125,
+      "modifier": 1,
+      "char_code": 0,
+      "name": "Extend Cell, or Track Selection Down"
+    },
+    "192": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "664": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "962": {
+      "key": 122,
+      "modifier": 0,
+      "char_code": 122,
+      "name": ""
+    },
+    "564": {
+      "key": 120,
+      "modifier": 8,
+      "char_code": 120,
+      "name": "Configure Channel Strip Components\u2026"
+    },
+    "391": {
+      "key": 30,
+      "modifier": 8,
+      "char_code": 63232,
+      "name": ""
+    },
+    "739": {
+      "key": 112,
+      "modifier": 0,
+      "char_code": 112,
+      "name": ""
+    },
+    "590": {
+      "key": 30,
+      "modifier": 40,
+      "char_code": 63232,
+      "name": ""
+    },
+    "764": {
+      "key": 118,
+      "modifier": 32,
+      "char_code": 118,
+      "name": "Paste"
+    },
+    "1345": {
+      "key": 7,
+      "modifier": 9,
+      "char_code": 0,
+      "name": "fade last"
+    },
+    "193": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "963": {
+      "key": 122,
+      "modifier": 1,
+      "char_code": 122,
+      "name": ""
+    },
+    "491": {
+      "key": 119,
+      "modifier": 32,
+      "char_code": 119,
+      "name": ""
+    },
+    "1295": {
+      "key": 51,
+      "modifier": 32,
+      "char_code": 51,
+      "name": "Delete Files"
+    },
+    "566": {
+      "key": 109,
+      "modifier": 8,
+      "char_code": 109,
+      "name": "Toggle Track On"
+    },
+    "392": {
+      "key": 31,
+      "modifier": 8,
+      "char_code": 63233,
+      "name": ""
+    },
+    "591": {
+      "key": 127,
+      "modifier": 40,
+      "char_code": 127,
+      "name": ""
+    },
+    "166": {
+      "key": 118,
+      "modifier": 4,
+      "char_code": 118,
+      "name": ""
+    },
+    "168": {
+      "key": 28,
+      "modifier": 8,
+      "char_code": 63234,
+      "name": ""
+    },
+    "194": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "964": {
+      "key": 43,
+      "modifier": 0,
+      "char_code": 43,
+      "name": ""
+    },
+    "169": {
+      "key": 29,
+      "modifier": 8,
+      "char_code": 63235,
+      "name": ""
+    },
+    "2327": {
+      "key": 102,
+      "modifier": 0,
+      "char_code": 102,
+      "name": ""
+    },
+    "2328": {
+      "key": 108,
+      "modifier": 0,
+      "char_code": 108,
+      "name": ""
+    },
+    "2329": {
+      "key": 121,
+      "modifier": 0,
+      "char_code": 121,
+      "name": ""
+    },
+    "592": {
+      "key": 127,
+      "modifier": 41,
+      "char_code": 127,
+      "name": ""
+    },
+    "766": {
+      "key": 97,
+      "modifier": 32,
+      "char_code": 97,
+      "name": "Select All"
+    },
+    "2344": {
+      "key": 103,
+      "modifier": 12,
+      "char_code": 103,
+      "name": "Set Global Edit Mode to Gate"
+    },
+    "195": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "965": {
+      "key": 113,
+      "modifier": 0,
+      "char_code": 113,
+      "name": ""
+    },
+    "2877": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1296": {
+      "key": 98,
+      "modifier": 0,
+      "char_code": 98,
+      "name": ""
+    },
+    "930": {
+      "key": 120,
+      "modifier": 0,
+      "char_code": 120,
+      "name": ""
+    },
+    "931": {
+      "key": 99,
+      "modifier": 0,
+      "char_code": 99,
+      "name": ""
+    },
+    "295": {
+      "key": 30,
+      "modifier": 44,
+      "char_code": 63232,
+      "name": ""
+    },
+    "593": {
+      "key": 114,
+      "modifier": 4,
+      "char_code": 114,
+      "name": ""
+    },
+    "932": {
+      "key": 118,
+      "modifier": 0,
+      "char_code": 118,
+      "name": ""
+    },
+    "933": {
+      "key": 98,
+      "modifier": 0,
+      "char_code": 98,
+      "name": ""
+    },
+    "934": {
+      "key": 110,
+      "modifier": 0,
+      "char_code": 110,
+      "name": ""
+    },
+    "935": {
+      "key": 109,
+      "modifier": 0,
+      "char_code": 109,
+      "name": ""
+    },
+    "936": {
+      "key": 44,
+      "modifier": 0,
+      "char_code": 44,
+      "name": "Velocity 96 (f)"
+    },
+    "569": {
+      "key": 0,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "2345": {
+      "key": 45,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "296": {
+      "key": 31,
+      "modifier": 44,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1297": {
+      "key": 102,
+      "modifier": 36,
+      "char_code": 102,
+      "name": "Enter/Exit Full Screen"
+    },
+    "937": {
+      "key": 46,
+      "modifier": 0,
+      "char_code": 46,
+      "name": "Velocity 112 (ff)"
+    },
+    "495": {
+      "key": 48,
+      "modifier": 32,
+      "char_code": 48,
+      "name": "Open Environment\u2026"
+    },
+    "2878": {
+      "key": 9,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "706": {
+      "key": 119,
+      "modifier": 8,
+      "char_code": 119,
+      "name": ""
+    },
+    "690": {
+      "key": 50,
+      "modifier": 32,
+      "char_code": 50,
+      "name": "Open Mixer\u2026"
+    },
+    "2593": {
+      "key": 36,
+      "modifier": 32,
+      "char_code": 0,
+      "name": "Stop All Cells"
+    },
+    "297": {
+      "key": 28,
+      "modifier": 44,
+      "char_code": 63234,
+      "name": ""
+    },
+    "893": {
+      "key": 103,
+      "modifier": 0,
+      "char_code": 103,
+      "name": "Gain Tool"
+    },
+    "2891": {
+      "key": 15,
+      "modifier": 33,
+      "char_code": 0,
+      "name": ""
+    },
+    "695": {
+      "key": 99,
+      "modifier": 12,
+      "char_code": 99,
+      "name": "Set Global Edit Mode to Chance"
+    },
+    "2346": {
+      "key": 2,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "298": {
+      "key": 29,
+      "modifier": 44,
+      "char_code": 63235,
+      "name": ""
+    },
+    "2061": {
+      "key": 103,
+      "modifier": 5,
+      "char_code": 103,
+      "name": "Show/Hide Grouping"
+    },
+    "2879": {
+      "key": 9,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "1710": {
+      "key": 104,
+      "modifier": 0,
+      "char_code": 104,
+      "name": "Crosshair Tool"
+    },
+    "497": {
+      "key": 56,
+      "modifier": 32,
+      "char_code": 56,
+      "name": "Open Project Audio\u2026"
+    },
+    "696": {
+      "key": 44,
+      "modifier": 12,
+      "char_code": 44,
+      "name": ""
+    },
+    "2892": {
+      "key": 8,
+      "modifier": 32,
+      "char_code": 127,
+      "name": ""
+    },
+    "1349": {
+      "key": 7,
+      "modifier": 12,
+      "char_code": 0,
+      "name": "fade"
+    },
+    "299": {
+      "key": 99,
+      "modifier": 13,
+      "char_code": 99,
+      "name": "Settings: Chords and Grids"
+    },
+    "597": {
+      "key": 122,
+      "modifier": 40,
+      "char_code": 122,
+      "name": "Toggle Individual Track Zoom"
+    },
+    "895": {
+      "key": 116,
+      "modifier": 33,
+      "char_code": 116,
+      "name": "Save Template"
+    },
+    "498": {
+      "key": 54,
+      "modifier": 32,
+      "char_code": 54,
+      "name": "Open Audio File Editor\u2026"
+    },
+    "796": {
+      "key": 122,
+      "modifier": 33,
+      "char_code": 122,
+      "name": "Redo"
+    },
+    "399": {
+      "key": 112,
+      "modifier": 1,
+      "char_code": 112,
+      "name": ""
+    },
+    "697": {
+      "key": 46,
+      "modifier": 12,
+      "char_code": 46,
+      "name": "Set Locators by Next Marker and Enable Cycle"
+    },
+    "598": {
+      "key": 122,
+      "modifier": 4,
+      "char_code": 122,
+      "name": ""
+    },
+    "1711": {
+      "key": 108,
+      "modifier": 40,
+      "char_code": 108,
+      "name": "Learn (Add)"
+    },
+    "797": {
+      "key": 122,
+      "modifier": 44,
+      "char_code": 122,
+      "name": "Undo History\u2026"
+    },
+    "2893": {
+      "key": 17,
+      "modifier": 33,
+      "char_code": 0,
+      "name": ""
+    },
+    "698": {
+      "key": 81,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "599": {
+      "key": 120,
+      "modifier": 4,
+      "char_code": 120,
+      "name": ""
+    },
+    "897": {
+      "key": 98,
+      "modifier": 33,
+      "char_code": 98,
+      "name": "Show/Hide Beat Mapping Track"
+    },
+    "699": {
+      "key": 46,
+      "modifier": 33,
+      "char_code": 46,
+      "name": "Move Locators Forward by Cycle Length / Loop Forward by Loop Length"
+    },
+    "2063": {
+      "key": 105,
+      "modifier": 5,
+      "char_code": 105,
+      "name": ""
+    },
+    "1712": {
+      "key": 98,
+      "modifier": 40,
+      "char_code": 98,
+      "name": "Time Stretch Region Length to Nearest Bar"
+    },
+    "799": {
+      "key": 119,
+      "modifier": 9,
+      "char_code": 119,
+      "name": "Cycle Through Windows (counter-clockwise)"
+    },
+    "3048": {
+      "key": 107,
+      "modifier": 9,
+      "char_code": 107,
+      "name": "Open Controller Assignments"
+    },
+    "899": {
+      "key": 97,
+      "modifier": 33,
+      "char_code": 97,
+      "name": "Show/Hide Arrangement Track"
+    },
+    "2349": {
+      "key": 127,
+      "modifier": 44,
+      "char_code": 63272,
+      "name": ""
+    },
+    "2660": {
+      "key": 0,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1713": {
+      "key": 112,
+      "modifier": 4,
+      "char_code": 112,
+      "name": ""
+    },
+    "2895": {
+      "key": 11,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "1365": {
+      "key": 41,
+      "modifier": 32,
+      "char_code": 63273,
+      "name": ""
+    },
+    "2661": {
+      "key": 32,
+      "modifier": 8,
+      "char_code": 32,
+      "name": ""
+    },
+    "2662": {
+      "key": 32,
+      "modifier": 1,
+      "char_code": 32,
+      "name": ""
+    },
+    "1715": {
+      "key": 110,
+      "modifier": 40,
+      "char_code": 110,
+      "name": ""
+    },
+    "2960": {
+      "key": 123,
+      "modifier": 40,
+      "char_code": 0,
+      "name": "Selection Start and End to Previous Transient and Play"
+    },
+    "2599": {
+      "key": 36,
+      "modifier": 8,
+      "char_code": 0,
+      "name": "Queue Cell/Scene Playback"
+    },
+    "2897": {
+      "key": 124,
+      "modifier": 41,
+      "char_code": 0,
+      "name": ""
+    },
+    "2663": {
+      "key": 99,
+      "modifier": 4,
+      "char_code": 99,
+      "name": ""
+    },
+    "2067": {
+      "key": 118,
+      "modifier": 5,
+      "char_code": 118,
+      "name": "Paste to New Row"
+    },
+    "2961": {
+      "key": 30,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "2898": {
+      "key": 123,
+      "modifier": 41,
+      "char_code": 0,
+      "name": ""
+    },
+    "2664": {
+      "key": 60,
+      "modifier": 0,
+      "char_code": 60,
+      "name": ""
+    },
+    "1717": {
+      "key": 117,
+      "modifier": 36,
+      "char_code": 117,
+      "name": ""
+    },
+    "2366": {
+      "key": 0,
+      "modifier": 12,
+      "char_code": 63232,
+      "name": ""
+    },
+    "2962": {
+      "key": 44,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "2899": {
+      "key": 35,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "60": {
+      "key": 109,
+      "modifier": 4,
+      "char_code": 109,
+      "name": ""
+    },
+    "2665": {
+      "key": 87,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2367": {
+      "key": 1,
+      "modifier": 12,
+      "char_code": 63233,
+      "name": ""
+    },
+    "2069": {
+      "key": 7,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "2963": {
+      "key": 30,
+      "modifier": 36,
+      "char_code": 0,
+      "name": ""
+    },
+    "63": {
+      "key": 49,
+      "modifier": 44,
+      "char_code": 49,
+      "name": "Recall Zoom 1"
+    },
+    "2666": {
+      "key": 84,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "1719": {
+      "key": 31,
+      "modifier": 9,
+      "char_code": 0,
+      "name": ""
+    },
+    "64": {
+      "key": 50,
+      "modifier": 44,
+      "char_code": 50,
+      "name": "Recall Zoom 2"
+    },
+    "2964": {
+      "key": 44,
+      "modifier": 36,
+      "char_code": 0,
+      "name": ""
+    },
+    "65": {
+      "key": 51,
+      "modifier": 44,
+      "char_code": 51,
+      "name": "Recall Zoom 3"
+    },
+    "20": {
+      "key": 75,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "66": {
+      "key": 49,
+      "modifier": 45,
+      "char_code": 49,
+      "name": "Save as Zoom 1"
+    },
+    "21": {
+      "key": 152,
+      "modifier": 0,
+      "char_code": 242,
+      "name": ""
+    },
+    "67": {
+      "key": 50,
+      "modifier": 45,
+      "char_code": 50,
+      "name": "Save as Zoom 2"
+    },
+    "2667": {
+      "key": 97,
+      "modifier": 0,
+      "char_code": 97,
+      "name": ""
+    },
+    "68": {
+      "key": 51,
+      "modifier": 45,
+      "char_code": 51,
+      "name": "Save as Zoom 3"
+    },
+    "1733": {
+      "key": 120,
+      "modifier": 36,
+      "char_code": 120,
+      "name": "Cut Section Between Locators (Global)"
+    },
+    "1385": {
+      "key": 9,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "2668": {
+      "key": 28,
+      "modifier": 8,
+      "char_code": 63234,
+      "name": ""
+    },
+    "2681": {
+      "key": 32,
+      "modifier": 9,
+      "char_code": 32,
+      "name": "Preview Selection-Based Processing"
+    },
+    "1734": {
+      "key": 105,
+      "modifier": 36,
+      "char_code": 105,
+      "name": "Insert Silence Between Locators (Global)"
+    },
+    "1151": {
+      "key": 98,
+      "modifier": 32,
+      "char_code": 98,
+      "name": "Bounce\u2026"
+    },
+    "2669": {
+      "key": 29,
+      "modifier": 8,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1500": {
+      "key": 39,
+      "modifier": 32,
+      "char_code": 39,
+      "name": ""
+    },
+    "2967": {
+      "key": 124,
+      "modifier": 36,
+      "char_code": 0,
+      "name": "Show Subrows for Row"
+    },
+    "2980": {
+      "key": 17,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1735": {
+      "key": 118,
+      "modifier": 36,
+      "char_code": 118,
+      "name": "Insert Section at Playhead (Global)"
+    },
+    "1501": {
+      "key": 147,
+      "modifier": 32,
+      "char_code": 236,
+      "name": ""
+    },
+    "2968": {
+      "key": 27,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2981": {
+      "key": 45,
+      "modifier": 12,
+      "char_code": 0,
+      "name": "Decrement Loop Start for Row"
+    },
+    "1736": {
+      "key": 114,
+      "modifier": 36,
+      "char_code": 114,
+      "name": "Repeat Section Between Locators (Global)"
+    },
+    "1388": {
+      "key": 47,
+      "modifier": 41,
+      "char_code": 0,
+      "name": ""
+    },
+    "2969": {
+      "key": 123,
+      "modifier": 36,
+      "char_code": 0,
+      "name": "Hide Subrows for Row"
+    },
+    "1800": {
+      "key": 103,
+      "modifier": 4,
+      "char_code": 103,
+      "name": ""
+    },
+    "2982": {
+      "key": 31,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1737": {
+      "key": 102,
+      "modifier": 8,
+      "char_code": 102,
+      "name": "Un/disclose Take Folder"
+    },
+    "1750": {
+      "key": 100,
+      "modifier": 4,
+      "char_code": 100,
+      "name": ""
+    },
+    "1389": {
+      "key": 43,
+      "modifier": 41,
+      "char_code": 0,
+      "name": ""
+    },
+    "2983": {
+      "key": 37,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1738": {
+      "key": 117,
+      "modifier": 9,
+      "char_code": 117,
+      "name": "Flatten Take Folder/Cell"
+    },
+    "1802": {
+      "key": 100,
+      "modifier": 4,
+      "char_code": 100,
+      "name": ""
+    },
+    "2984": {
+      "key": 15,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1739": {
+      "key": 117,
+      "modifier": 8,
+      "char_code": 117,
+      "name": "Flatten and Merge Take Folder/Cell"
+    },
+    "2800": {
+      "key": 35,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "2502": {
+      "key": 0,
+      "modifier": 1,
+      "char_code": 0,
+      "name": ""
+    },
+    "1803": {
+      "key": 9,
+      "modifier": 8,
+      "char_code": 0,
+      "name": ""
+    },
+    "2985": {
+      "key": 8,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1753": {
+      "key": 102,
+      "modifier": 32,
+      "char_code": 102,
+      "name": "Show/Hide Flex Pitch/Time"
+    },
+    "1170": {
+      "key": 112,
+      "modifier": 8,
+      "char_code": 112,
+      "name": "Project Settings\u2026"
+    },
+    "1506": {
+      "key": 102,
+      "modifier": 5,
+      "char_code": 102,
+      "name": ""
+    },
+    "1208": {
+      "key": 107,
+      "modifier": 40,
+      "char_code": 107,
+      "name": "Show/Hide Step Input Keyboard"
+    },
+    "1221": {
+      "key": 4,
+      "modifier": 4,
+      "char_code": 63275,
+      "name": "To End"
+    },
+    "2986": {
+      "key": 3,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "2802": {
+      "key": 32,
+      "modifier": 44,
+      "char_code": 0,
+      "name": ""
+    },
+    "2504": {
+      "key": 103,
+      "modifier": 32,
+      "char_code": 103,
+      "name": "Toggle Snap mode"
+    },
+    "1158": {
+      "key": 97,
+      "modifier": 8,
+      "char_code": 97,
+      "name": "Open Automation Settings\u2026"
+    },
+    "1754": {
+      "key": 0,
+      "modifier": 33,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1805": {
+      "key": 115,
+      "modifier": 40,
+      "char_code": 115,
+      "name": ""
+    },
+    "1222": {
+      "key": 13,
+      "modifier": 0,
+      "char_code": 13,
+      "name": ""
+    },
+    "2987": {
+      "key": 0,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1520": {
+      "key": 30,
+      "modifier": 9,
+      "char_code": 63232,
+      "name": ""
+    },
+    "2803": {
+      "key": 32,
+      "modifier": 45,
+      "char_code": 0,
+      "name": ""
+    },
+    "1755": {
+      "key": 1,
+      "modifier": 33,
+      "char_code": 63233,
+      "name": ""
+    },
+    "3503": {
+      "key": 111,
+      "modifier": 5,
+      "char_code": 111,
+      "name": ""
+    },
+    "1806": {
+      "key": 111,
+      "modifier": 4,
+      "char_code": 111,
+      "name": ""
+    },
+    "2988": {
+      "key": 40,
+      "modifier": 12,
+      "char_code": 0,
+      "name": ""
+    },
+    "1521": {
+      "key": 31,
+      "modifier": 9,
+      "char_code": 63233,
+      "name": ""
+    },
+    "2804": {
+      "key": 36,
+      "modifier": 36,
+      "char_code": 0,
+      "name": "Retrigger Selected Cells or Focused Scene"
+    },
+    "1807": {
+      "key": 119,
+      "modifier": 4,
+      "char_code": 119,
+      "name": "Open in Audio File Editor"
+    },
+    "1820": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1522": {
+      "key": 114,
+      "modifier": 44,
+      "char_code": 114,
+      "name": "Free Tempo Recording"
+    },
+    "1757": {
+      "key": 101,
+      "modifier": 4,
+      "char_code": 101,
+      "name": ""
+    },
+    "110": {
+      "key": 113,
+      "modifier": 0,
+      "char_code": 113,
+      "name": "Quantize Tool"
+    },
+    "1770": {
+      "key": 147,
+      "modifier": 8,
+      "char_code": 236,
+      "name": ""
+    },
+    "210": {
+      "key": 118,
+      "modifier": 41,
+      "char_code": 118,
+      "name": "Paste Multiple"
+    },
+    "1821": {
+      "key": 61,
+      "modifier": 4,
+      "char_code": 61,
+      "name": "Increase Number of Transients"
+    },
+    "111": {
+      "key": 108,
+      "modifier": 0,
+      "char_code": 108,
+      "name": ""
+    },
+    "1758": {
+      "key": 116,
+      "modifier": 44,
+      "char_code": 116,
+      "name": "Show/Hide Toolbar"
+    },
+    "410": {
+      "key": 31,
+      "modifier": 8,
+      "char_code": 63233,
+      "name": ""
+    },
+    "311": {
+      "key": 157,
+      "modifier": 0,
+      "char_code": 249,
+      "name": ""
+    },
+    "510": {
+      "key": 111,
+      "modifier": 45,
+      "char_code": 111,
+      "name": "Set Punch Out Locator Point by Rounded Playhead"
+    },
+    "1822": {
+      "key": 45,
+      "modifier": 4,
+      "char_code": 45,
+      "name": "Decrease Number of Transients"
+    },
+    "411": {
+      "key": 30,
+      "modifier": 8,
+      "char_code": 63232,
+      "name": ""
+    },
+    "2807": {
+      "key": 36,
+      "modifier": 40,
+      "char_code": 0,
+      "name": "Trigger Focused Scene"
+    },
+    "312": {
+      "key": 157,
+      "modifier": 1,
+      "char_code": 249,
+      "name": ""
+    },
+    "213": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "412": {
+      "key": 120,
+      "modifier": 4,
+      "char_code": 120,
+      "name": ""
+    },
+    "114": {
+      "key": 100,
+      "modifier": 8,
+      "char_code": 100,
+      "name": "Delete Duplicated MIDI Events"
+    },
+    "214": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1823": {
+      "key": 116,
+      "modifier": 4,
+      "char_code": 116,
+      "name": ""
+    },
+    "413": {
+      "key": 98,
+      "modifier": 4,
+      "char_code": 98,
+      "name": ""
+    },
+    "2808": {
+      "key": 121,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "1240": {
+      "key": 13,
+      "modifier": 8,
+      "char_code": 13,
+      "name": ""
+    },
+    "314": {
+      "key": 114,
+      "modifier": 5,
+      "char_code": 114,
+      "name": ""
+    },
+    "910": {
+      "key": 117,
+      "modifier": 0,
+      "char_code": 117,
+      "name": ""
+    },
+    "2225": {
+      "key": 122,
+      "modifier": 0,
+      "char_code": 122,
+      "name": ""
+    },
+    "215": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "513": {
+      "key": 143,
+      "modifier": 8,
+      "char_code": 232,
+      "name": ""
+    },
+    "240": {
+      "key": 98,
+      "modifier": 1,
+      "char_code": 98,
+      "name": "Next note will be flat"
+    },
+    "414": {
+      "key": 107,
+      "modifier": 4,
+      "char_code": 107,
+      "name": "Copy/Convert Files\u2026"
+    },
+    "811": {
+      "key": 30,
+      "modifier": 40,
+      "char_code": 63232,
+      "name": ""
+    },
+    "116": {
+      "key": 97,
+      "modifier": 0,
+      "char_code": 97,
+      "name": ""
+    },
+    "315": {
+      "key": 118,
+      "modifier": 1,
+      "char_code": 118,
+      "name": "Copy Value to All Following Events"
+    },
+    "911": {
+      "key": 106,
+      "modifier": 0,
+      "char_code": 106,
+      "name": ""
+    },
+    "340": {
+      "key": 105,
+      "modifier": 1,
+      "char_code": 105,
+      "name": ""
+    },
+    "216": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "514": {
+      "key": 8,
+      "modifier": 8,
+      "char_code": 127,
+      "name": ""
+    },
+    "812": {
+      "key": 31,
+      "modifier": 40,
+      "char_code": 63233,
+      "name": ""
+    },
+    "2809": {
+      "key": 116,
+      "modifier": 32,
+      "char_code": 0,
+      "name": ""
+    },
+    "117": {
+      "key": 104,
+      "modifier": 4,
+      "char_code": 104,
+      "name": "Hide/Show Selected Tracks"
+    },
+    "440": {
+      "key": 98,
+      "modifier": 4,
+      "char_code": 98,
+      "name": ""
+    },
+    "316": {
+      "key": 100,
+      "modifier": 32,
+      "char_code": 100,
+      "name": ""
+    },
+    "912": {
+      "key": 32,
+      "modifier": 0,
+      "char_code": 32,
+      "name": ""
+    },
+    "341": {
+      "key": 108,
+      "modifier": 1,
+      "char_code": 108,
+      "name": "Select All Inside Locators"
+    },
+    "1178": {
+      "key": 101,
+      "modifier": 32,
+      "char_code": 101,
+      "name": "Export Tracks as Audio Files\u2026"
+    },
+    "217": {
+      "key": 121,
+      "modifier": 5,
+      "char_code": 121,
+      "name": "Force Syncopation"
+    },
+    "515": {
+      "key": 46,
+      "modifier": 8,
+      "char_code": 46,
+      "name": "Go to Next Marker And Set Locators"
+    },
+    "416": {
+      "key": 105,
+      "modifier": 4,
+      "char_code": 105,
+      "name": ""
+    },
+    "118": {
+      "key": 104,
+      "modifier": 5,
+      "char_code": 104,
+      "name": "Unhide All Tracks"
+    },
+    "441": {
+      "key": 98,
+      "modifier": 44,
+      "char_code": 98,
+      "name": "Revert to Backup"
+    },
+    "615": {
+      "key": 30,
+      "modifier": 0,
+      "char_code": 63232,
+      "name": ""
+    },
+    "1191": {
+      "key": 143,
+      "modifier": 9,
+      "char_code": 232,
+      "name": ""
+    },
+    "640": {
+      "key": 28,
+      "modifier": 8,
+      "char_code": 63234,
+      "name": ""
+    },
+    "218": {
+      "key": 121,
+      "modifier": 4,
+      "char_code": 121,
+      "name": ""
+    },
+    "516": {
+      "key": 44,
+      "modifier": 8,
+      "char_code": 44,
+      "name": "Go to Previous Marker And Set Locators"
+    },
+    "1526": {
+      "key": 115,
+      "modifier": 12,
+      "char_code": 115,
+      "name": "Set Global Edit Mode to Steps On/Off"
+    },
+    "417": {
+      "key": 101,
+      "modifier": 4,
+      "char_code": 101,
+      "name": ""
+    },
+    "1540": {
+      "key": 49,
+      "modifier": 13,
+      "char_code": 49,
+      "name": "Set main finger 1"
+    },
+    "119": {
+      "key": 39,
+      "modifier": 8,
+      "char_code": 39,
+      "name": "Create Marker"
+    },
+    "616": {
+      "key": 31,
+      "modifier": 0,
+      "char_code": 63233,
+      "name": ""
+    },
+    "1527": {
+      "key": 29,
+      "modifier": 9,
+      "char_code": 63235,
+      "name": ""
+    },
+    "641": {
+      "key": 29,
+      "modifier": 8,
+      "char_code": 63235,
+      "name": ""
+    },
+    "1179": {
+      "key": 101,
+      "modifier": 33,
+      "char_code": 101,
+      "name": "Export All Tracks as Audio Files\u2026"
+    },
+    "1775": {
+      "key": 109,
+      "modifier": 33,
+      "char_code": 109,
+      "name": "Show/Hide Output Track"
+    },
+    "542": {
+      "key": 114,
+      "modifier": 1,
+      "char_code": 114,
+      "name": "Live Record"
+    },
+    "343": {
+      "key": 111,
+      "modifier": 1,
+      "char_code": 111,
+      "name": ""
+    },
+    "1192": {
+      "key": 143,
+      "modifier": 1,
+      "char_code": 232,
+      "name": ""
+    },
+    "443": {
+      "key": 115,
+      "modifier": 40,
+      "char_code": 115,
+      "name": ""
+    },
+    "617": {
+      "key": 122,
+      "modifier": 5,
+      "char_code": 122,
+      "name": ""
+    },
+    "170": {
+      "key": 30,
+      "modifier": 8,
+      "char_code": 63232,
+      "name": ""
+    },
+    "642": {
+      "key": 28,
+      "modifier": 9,
+      "char_code": 63234,
+      "name": ""
+    },
+    "940": {
+      "key": 29,
+      "modifier": 0,
+      "char_code": 63235,
+      "name": ""
+    },
+    "816": {
+      "key": 120,
+      "modifier": 13,
+      "char_code": 120,
+      "name": "Settings: Extended Layout"
+    },
+    "1541": {
+      "key": 50,
+      "modifier": 13,
+      "char_code": 50,
+      "name": "Set main finger 2"
+    },
+    "419": {
+      "key": 11,
+      "modifier": 0,
+      "char_code": 63276,
+      "name": ""
+    },
+    "344": {
+      "key": 115,
+      "modifier": 1,
+      "char_code": 115,
+      "name": ""
+    },
+    "2228": {
+      "key": 103,
+      "modifier": 40,
+      "char_code": 103,
+      "name": "Toggle Alignment Guides"
+    },
+    "618": {
+      "key": 105,
+      "modifier": 1,
+      "char_code": 105,
+      "name": ""
+    },
+    "171": {
+      "key": 31,
+      "modifier": 8,
+      "char_code": 63233,
+      "name": ""
+    },
+    "643": {
+      "key": 29,
+      "modifier": 9,
+      "char_code": 63235,
+      "name": ""
+    },
+    "941": {
+      "key": 8,
+      "modifier": 4,
+      "char_code": 127,
+      "name": ""
+    },
+    "1776": {
+      "key": 18,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "544": {
+      "key": 32,
+      "modifier": 1,
+      "char_code": 32,
+      "name": ""
+    },
+    "444": {
+      "key": 112,
+      "modifier": 1,
+      "char_code": 112,
+      "name": ""
+    },
+    "817": {
+      "key": 109,
+      "modifier": 13,
+      "char_code": 109,
+      "name": "Settings: MIDI Meaning"
+    },
+    "445": {
+      "key": 115,
+      "modifier": 1,
+      "char_code": 115,
+      "name": ""
+    },
+    "1827": {
+      "key": 28,
+      "modifier": 33,
+      "char_code": 63234,
+      "name": ""
+    },
+    "172": {
+      "key": 28,
+      "modifier": 9,
+      "char_code": 63234,
+      "name": ""
+    },
+    "644": {
+      "key": 102,
+      "modifier": 4,
+      "char_code": 102,
+      "name": ""
+    },
+    "942": {
+      "key": 28,
+      "modifier": 0,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1542": {
+      "key": 51,
+      "modifier": 13,
+      "char_code": 51,
+      "name": "Set main finger 3"
+    },
+    "545": {
+      "key": 119,
+      "modifier": 8,
+      "char_code": 119,
+      "name": ""
+    },
+    "743": {
+      "key": 119,
+      "modifier": 0,
+      "char_code": 119,
+      "name": ""
+    },
+    "2229": {
+      "key": 127,
+      "modifier": 40,
+      "char_code": 63272,
+      "name": ""
+    },
+    "446": {
+      "key": 28,
+      "modifier": 12,
+      "char_code": 63234,
+      "name": ""
+    },
+    "1777": {
+      "key": 19,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "173": {
+      "key": 29,
+      "modifier": 9,
+      "char_code": 63235,
+      "name": ""
+    },
+    "943": {
+      "key": 48,
+      "modifier": 0,
+      "char_code": 48,
+      "name": "Dotted note values On/Off"
+    },
+    "2527": {
+      "key": 122,
+      "modifier": 36,
+      "char_code": 122,
+      "name": "Plug-in Undo"
+    },
+    "1790": {
+      "key": 99,
+      "modifier": 41,
+      "char_code": 99,
+      "name": "Color Tracks by Region/Cell Color"
+    },
+    "248": {
+      "key": 115,
+      "modifier": 13,
+      "char_code": 115,
+      "name": "Show/Hide Staff Style Window"
+    },
+    "546": {
+      "key": 88,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "670": {
+      "key": 82,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1828": {
+      "key": 29,
+      "modifier": 33,
+      "char_code": 63235,
+      "name": ""
+    },
+    "447": {
+      "key": 29,
+      "modifier": 12,
+      "char_code": 63235,
+      "name": ""
+    },
+    "174": {
+      "key": 30,
+      "modifier": 9,
+      "char_code": 63232,
+      "name": ""
+    },
+    "944": {
+      "key": 57,
+      "modifier": 0,
+      "char_code": 57,
+      "name": "Triplets On/Off"
+    },
+    "1543": {
+      "key": 52,
+      "modifier": 13,
+      "char_code": 52,
+      "name": "Set main finger 4"
+    },
+    "671": {
+      "key": 83,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "249": {
+      "key": 105,
+      "modifier": 13,
+      "char_code": 105,
+      "name": "Show/Hide Score Sets Window"
+    },
+    "547": {
+      "key": 89,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "2528": {
+      "key": 122,
+      "modifier": 37,
+      "char_code": 122,
+      "name": "Plug-in Redo"
+    },
+    "1778": {
+      "key": 20,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "448": {
+      "key": 31,
+      "modifier": 12,
+      "char_code": 63233,
+      "name": ""
+    },
+    "175": {
+      "key": 31,
+      "modifier": 9,
+      "char_code": 63233,
+      "name": ""
+    },
+    "945": {
+      "key": 98,
+      "modifier": 8,
+      "char_code": 98,
+      "name": "Show Both, Live Loops Grid and Tracks View"
+    },
+    "1791": {
+      "key": 100,
+      "modifier": 33,
+      "char_code": 100,
+      "name": "Create Track Stack\u2026"
+    },
+    "672": {
+      "key": 84,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "548": {
+      "key": 91,
+      "modifier": 0,
+      "char_code": 0,
+      "name": "Previous Patch, Plug-in Setting or Sampler Instrument"
+    },
+    "571": {
+      "key": 13,
+      "modifier": 1,
+      "char_code": 13,
+      "name": ""
+    },
+    "1829": {
+      "key": 28,
+      "modifier": 40,
+      "char_code": 63234,
+      "name": ""
+    },
+    "345": {
+      "key": 101,
+      "modifier": 1,
+      "char_code": 101,
+      "name": ""
+    },
+    "346": {
+      "key": 102,
+      "modifier": 1,
+      "char_code": 102,
+      "name": ""
+    },
+    "176": {
+      "key": 112,
+      "modifier": 4,
+      "char_code": 112,
+      "name": ""
+    },
+    "946": {
+      "key": 136,
+      "modifier": 8,
+      "char_code": 224,
+      "name": ""
+    },
+    "474": {
+      "key": 107,
+      "modifier": 0,
+      "char_code": 107,
+      "name": "Toggle Metronome Click"
+    },
+    "772": {
+      "key": 109,
+      "modifier": 36,
+      "char_code": 109,
+      "name": "Zoom Window"
+    },
+    "549": {
+      "key": 92,
+      "modifier": 0,
+      "char_code": 0,
+      "name": ""
+    },
+    "673": {
+      "key": 85,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1779": {
+      "key": 21,
+      "modifier": 5,
+      "char_code": 0,
+      "name": ""
+    },
+    "1544": {
+      "key": 53,
+      "modifier": 13,
+      "char_code": 53,
+      "name": "Set main finger 5"
+    },
+    "748": {
+      "key": 111,
+      "modifier": 0,
+      "char_code": 111,
+      "name": "Show/Hide Loop Browser"
+    },
+    "177": {
+      "key": 105,
+      "modifier": 1,
+      "char_code": 105,
+      "name": ""
+    },
+    "475": {
+      "key": 101,
+      "modifier": 8,
+      "char_code": 101,
+      "name": "Show/Hide Event Float"
+    },
+    "1792": {
+      "key": 104,
+      "modifier": 33,
+      "char_code": 104,
+      "name": "Create Folder Stack"
+    },
+    "674": {
+      "key": 86,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1012": {
+      "key": 111,
+      "modifier": 36,
+      "char_code": 111,
+      "name": "Toggle Selected Tracks or Channel Strips Automation Off/Read"
+    },
+    "2244": {
+      "key": 143,
+      "modifier": 0,
+      "char_code": 232,
+      "name": ""
+    },
+    "574": {
+      "key": 116,
+      "modifier": 32,
+      "char_code": 116,
+      "name": ""
+    },
+    "749": {
+      "key": 121,
+      "modifier": 0,
+      "char_code": 121,
+      "name": ""
+    },
+    "347": {
+      "key": 2,
+      "modifier": 1,
+      "char_code": 0,
+      "name": ""
+    },
+    "348": {
+      "key": 1,
+      "modifier": 1,
+      "char_code": 63273,
+      "name": ""
+    },
+    "948": {
+      "key": 92,
+      "modifier": 0,
+      "char_code": 92,
+      "name": ""
+    },
+    "2010": {
+      "key": 97,
+      "modifier": 1,
+      "char_code": 97,
+      "name": "Select Audio Channel Strips"
+    },
+    "675": {
+      "key": 87,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "349": {
+      "key": 4,
+      "modifier": 1,
+      "char_code": 63275,
+      "name": ""
+    },
+    "1193": {
+      "key": 8,
+      "modifier": 5,
+      "char_code": 127,
+      "name": ""
+    },
+    "1194": {
+      "key": 111,
+      "modifier": 40,
+      "char_code": 111,
+      "name": "Open Movie\u2026"
+    },
+    "1528": {
+      "key": 28,
+      "modifier": 9,
+      "char_code": 63234,
+      "name": ""
+    },
+    "179": {
+      "key": 117,
+      "modifier": 1,
+      "char_code": 117,
+      "name": ""
+    },
+    "1793": {
+      "key": 103,
+      "modifier": 33,
+      "char_code": 103,
+      "name": "Create Summing Stack"
+    },
+    "775": {
+      "key": 57,
+      "modifier": 32,
+      "char_code": 57,
+      "name": "Open Transform\u2026"
+    },
+    "90": {
+      "key": 106,
+      "modifier": 32,
+      "char_code": 106,
+      "name": "Join Regions/Notes"
+    },
+    "676": {
+      "key": 88,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "91": {
+      "key": 116,
+      "modifier": 40,
+      "char_code": 116,
+      "name": ""
+    },
+    "577": {
+      "key": 121,
+      "modifier": 32,
+      "char_code": 121,
+      "name": "Insert Empty Scene"
+    },
+    "2011": {
+      "key": 115,
+      "modifier": 1,
+      "char_code": 115,
+      "name": ""
+    },
+    "677": {
+      "key": 89,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "1261": {
+      "key": 18,
+      "modifier": 4,
+      "char_code": 0,
+      "name": ""
+    },
+    "578": {
+      "key": 110,
+      "modifier": 9,
+      "char_code": 110,
+      "name": "Name Regions/Cells by Track Name"
+    },
+    "1794": {
+      "key": 117,
+      "modifier": 33,
+      "char_code": 117,
+      "name": "Flatten Stack"
+    },
+    "1610": {
+      "key": 117,
+      "modifier": 36,
+      "char_code": 117,
+      "name": ""
+    },
+    "678": {
+      "key": 91,
+      "modifier": 4,
+      "char_code": 0,
+      "name": "Set Row Playback Mode to Reverse"
+    }
+  },
+  "id_to_name": {
+    "542": "Live Record",
+    "2577": "Trigger Cells or Scene",
+    "936": "Velocity 96 (f)",
+    "943": "Dotted note values On/Off",
+    "2681": "Preview Selection-Based Processing",
+    "937": "Velocity 112 (ff)",
+    "12": "Fast Rewind",
+    "1285": "Forward by Transient",
+    "2992": "Insert: Crescendo",
+    "2954": "Insert: Decrescendo",
+    "880": "Voice Separation Tool",
+    "505": "Set Punch In Locator by Playhead",
+    "509": "Set Punch In Locator by Rounded Playhead",
+    "506": "Set Punch Out Locator by Playhead",
+    "510": "Set Punch Out Locator Point by Rounded Playhead",
+    "100": "Set Locators/Loop by Regions/Events/Marquee and Enable Cycle/Loop",
+    "699": "Move Locators Forward by Cycle Length / Loop Forward by Loop Length",
+    "700": "Move Locators Backwards by Cycle Length / Loop Backwards by Loop Length",
+    "2599": "Queue Cell/Scene Playback",
+    "119": "Create Marker",
+    "695": "Set Global Edit Mode to Chance",
+    "697": "Set Locators by Next Marker and Enable Cycle",
+    "516": "Go to Previous Marker And Set Locators",
+    "515": "Go to Next Marker And Set Locators",
+    "1215": "Rename Marker",
+    "920": "1/1 Note",
+    "921": "1/2 Note",
+    "922": "1/4 Note",
+    "923": "1/8 Note",
+    "924": "1/16 Note",
+    "925": "1/32 Note",
+    "926": "1/64 Note",
+    "927": "1/128 Note",
+    "944": "Triplets On/Off",
+    "16": "Toggle Autopunch Mode",
+    "11": "Velocity 127 (fff)",
+    "482": "Clear/Recall Solo",
+    "474": "Toggle Metronome Click",
+    "1291": "Toggle Count-in",
+    "239": "Next note will be sharp",
+    "30": "Open Settings\u2026",
+    "1158": "Open Automation Settings\u2026",
+    "487": "Open Event List\u2026",
+    "686": "Open Main Window\u2026",
+    "690": "Open Mixer\u2026",
+    "488": "Open Score Editor\u2026",
+    "1295": "Delete Files",
+    "775": "Open Transform\u2026",
+    "489": "Open Piano Roll\u2026",
+    "495": "Open Environment\u2026",
+    "497": "Open Project Audio\u2026",
+    "498": "Open Audio File Editor\u2026",
+    "1304": "Show/Hide Musical Typing\u2026",
+    "475": "Show/Hide Event Float",
+    "248": "Show/Hide Staff Style Window",
+    "249": "Show/Hide Score Sets Window",
+    "1208": "Show/Hide Step Input Keyboard",
+    "748": "Show/Hide Loop Browser",
+    "583": "Open in External Sample Editor",
+    "39": "Open Tempo List\u2026",
+    "35": "Open Key Command Assignments\u2026",
+    "483": "Show/Hide Colors",
+    "1297": "Enter/Exit Full Screen",
+    "1194": "Open Movie\u2026",
+    "1012": "Toggle Selected Tracks or Channel Strips Automation Off/Read",
+    "1015": "Toggle Selected Tracks or Channel Strips Automation Latch/Read",
+    "1019": "Set All Tracks to Automation Off",
+    "1020": "Set All Tracks to Automation Read",
+    "1021": "Set All Tracks to Automation Touch",
+    "1022": "Set All Tracks to Automation Latch",
+    "1032": "Track Automation Event List\u2026",
+    "1030": "Toggle Automation Quick Access",
+    "1031": "Enable/Disable Groups",
+    "799": "Cycle Through Windows (counter-clockwise)",
+    "2312": "Hide Logic Pro",
+    "2313": "Hide Others",
+    "760": "Quit",
+    "785": "New Empty Project",
+    "751": "New from Template\u2026",
+    "752": "Open\u2026",
+    "1170": "Project Settings\u2026",
+    "753": "Close Project",
+    "754": "Save",
+    "32": "Save Project as\u2026",
+    "757": "Print",
+    "758": "Import\u2026",
+    "759": "Export Selection as MIDI File\u2026",
+    "1178": "Export Tracks as Audio Files\u2026",
+    "1179": "Export All Tracks as Audio Files\u2026",
+    "2527": "Plug-in Undo",
+    "2528": "Plug-in Redo",
+    "1252": "Minimize Window",
+    "2314": "Minimize All Windows",
+    "772": "Zoom Window",
+    "1216": "Copy Channel Strip Setting",
+    "1217": "Paste Channel Strip Setting",
+    "548": "Previous Patch, Plug-in Setting or Sampler Instrument",
+    "1235": "Solo Row",
+    "1255": "Velocity Tool",
+    "1522": "Free Tempo Recording",
+    "337": "Set Nudge Value to Bar",
+    "336": "Set Nudge Value to Beat",
+    "335": "Set Nudge Value to Division",
+    "334": "Set Global Edit Mode to Tie",
+    "338": "Set Global Edit Mode to Start Offset",
+    "339": "Set Nudge Value to 0.5 SMPTE Frame",
+    "1578": "Set Nudge Value to 10 ms",
+    "1573": "Set Nudge Value to 1 ms",
+    "1526": "Set Global Edit Mode to Steps On/Off",
+    "2593": "Stop All Cells",
+    "3048": "Open Controller Assignments",
+    "3096": "Learn new Controller Assignment",
+    "761": "Undo",
+    "796": "Redo",
+    "797": "Undo History\u2026",
+    "762": "Cut",
+    "763": "Copy",
+    "764": "Paste",
+    "766": "Select All",
+    "558": "Set Next Tool or Edit Mode",
+    "1744": "Configure Track Header\u2026",
+    "63": "Recall Zoom 1",
+    "64": "Recall Zoom 2",
+    "65": "Recall Zoom 3",
+    "66": "Save as Zoom 1",
+    "67": "Save as Zoom 2",
+    "68": "Save as Zoom 3",
+    "78": "Navigation: Back",
+    "76": "Navigation: Forward",
+    "53": "Toggle MIDI Out (Note Preview)",
+    "72": "Toggle MIDI In (Step Record)",
+    "881": "Decrease Last Clicked Parameter by 10",
+    "1903": "Preview Selected Zone",
+    "1900": "Randomize Current Edit Mode Values for All Rows",
+    "1795": "New Audio Track",
+    "1796": "Save Selection As\u2026",
+    "1282": "New Session Player SI Track\u2026",
+    "1798": "Crop Sample",
+    "1600": "Search and Select Track\u2026",
+    "1186": "Import Audio File\u2026",
+    "341": "Select All Inside Locators",
+    "2874": "Step Backwards",
+    "2875": "Step Forward",
+    "209": "Reverse",
+    "110": "Quantize Tool",
+    "381": "Dequantize",
+    "114": "Delete Duplicated MIDI Events",
+    "383": "Paste Replace",
+    "2276": "Repeat Step",
+    "679": "Set Row Playback Mode to Shuffle",
+    "90": "Join Regions/Notes",
+    "2886": "Hide All Regions",
+    "2887": "Show All Regions",
+    "2888": "Transpose +1 Octave",
+    "2889": "Transpose -1 Octave",
+    "2701": "Shift selected Zones/Groups Right",
+    "2700": "Shift selected Zones/Groups Left",
+    "2974": "Shift selected Zones/Groups Right (Zones incl. Root Key)",
+    "2975": "Shift selected Zones/Groups Left (Zones incl. Root Key)",
+    "2584": "Go to Region End",
+    "2583": "Go to Region Start",
+    "2967": "Show Subrows for Row",
+    "2969": "Hide Subrows for Row",
+    "577": "Insert Empty Scene",
+    "2504": "Toggle Snap mode",
+    "1151": "Bounce\u2026",
+    "363": "Select Same Channels",
+    "2010": "Select Audio Channel Strips",
+    "2589": "Extend Cell, or Track Selection Up",
+    "2590": "Extend Cell, or Track Selection Down",
+    "302": "Set Global Edit Mode to Note Repeat",
+    "893": "Gain Tool",
+    "883": "Configure Global Tracks\u2026",
+    "899": "Show/Hide Arrangement Track",
+    "888": "Show/Hide Marker Track",
+    "887": "Show/Hide Movie Track",
+    "895": "Save Template",
+    "897": "Show/Hide Beat Mapping Track",
+    "1213": "Toggle Selected Step",
+    "554": "Automation: Display Off",
+    "250": "Settings: Global Format",
+    "85": "Unpack Take Folder to Independent Tracks or Unpack Folder/Take Cell to New Tracks",
+    "1258": "Create 1 Track Automation Point at Region Borders",
+    "1259": "Create 2 Track Automation Points at Region Borders",
+    "1301": "Create 1 Track Automation Point at Every Region Border",
+    "1302": "Create 2 Track Automation Points at Every Region Border",
+    "1729": "Pack Take Folder",
+    "1737": "Un/disclose Take Folder",
+    "1738": "Flatten Take Folder/Cell",
+    "1739": "Flatten and Merge Take Folder/Cell",
+    "1740": "Text Tool",
+    "1745": "Toggle Take Folder Quick Swipe Comping Mode",
+    "1791": "Create Track Stack\u2026",
+    "1792": "Create Folder Stack",
+    "1793": "Create Summing Stack",
+    "1794": "Flatten Stack",
+    "1749": "Bounce Tracks in Place",
+    "117": "Hide/Show Selected Tracks",
+    "118": "Unhide All Tracks",
+    "1710": "Crosshair Tool",
+    "566": "Toggle Track On",
+    "597": "Toggle Individual Track Zoom",
+    "564": "Configure Channel Strip Components\u2026",
+    "1733": "Cut Section Between Locators (Global)",
+    "1734": "Insert Silence Between Locators (Global)",
+    "1735": "Insert Section at Playhead (Global)",
+    "1736": "Repeat Section Between Locators (Global)",
+    "1797": "Cut Sections of Selected Arrangement Markers",
+    "129": "Move Region to Recorded Position",
+    "579": "Randomize Current Edit Mode Values for Row",
+    "582": "Convert Regions to New Audio Files\u2026",
+    "1711": "Learn (Add)",
+    "1712": "Time Stretch Region Length to Nearest Bar",
+    "2344": "Set Global Edit Mode to Gate",
+    "102": "Apply Quantization Permanently",
+    "731": "Toggle Keyboard/Group/Zone View",
+    "945": "Show Both, Live Loops Grid and Tracks View",
+    "1753": "Show/Hide Flex Pitch/Time",
+    "678": "Set Row Playback Mode to Reverse",
+    "1799": "Rename Regions/Cells/Scenes",
+    "578": "Name Regions/Cells by Track Name",
+    "1789": "Name Tracks by Region/Cell Name",
+    "560": "Color Regions/Cells by Track Color",
+    "1790": "Color Tracks by Region/Cell Color",
+    "1705": "Waveform Vertical Zoom Out",
+    "1758": "Show/Hide Toolbar",
+    "1775": "Show/Hide Output Track",
+    "2228": "Toggle Alignment Guides",
+    "2807": "Trigger Focused Scene",
+    "2804": "Retrigger Selected Cells or Focused Scene",
+    "2007": "Octave + 2",
+    "2105": "Show/Hide Long Faders",
+    "2061": "Show/Hide Grouping",
+    "2067": "Paste to New Row",
+    "2050": "Show/Hide Track Number",
+    "208": "Show/Hide Instrument Names",
+    "2580": "Apply Channel Strip Configuration User Default",
+    "1040": "Sends on Faders - Cycle Through Sends",
+    "210": "Paste Multiple",
+    "217": "Force Syncopation",
+    "240": "Next note will be flat",
+    "257": "Assign MIDI Channels based on Score Split",
+    "251": "Settings: Numbers and Names",
+    "252": "Settings: Guitar Tablature",
+    "299": "Settings: Chords and Grids",
+    "255": "Settings: Clefs and Signatures",
+    "816": "Settings: Extended Layout",
+    "817": "Settings: MIDI Meaning",
+    "254": "Settings: Score Colors",
+    "1542": "Set main finger 3",
+    "1540": "Set main finger 1",
+    "1541": "Set main finger 2",
+    "1543": "Set main finger 4",
+    "1544": "Set main finger 5",
+    "303": "Length as Absolute Position",
+    "305": "Articulation",
+    "315": "Copy Value to All Following Events",
+    "2847": "Set Pattern Playback Mode to Pendulum",
+    "2848": "Set Pattern Playback Mode to Wander",
+    "2849": "Set Pattern Playback Mode to Random",
+    "2846": "Set Row Playback Mode to Random",
+    "2959": "Selection Start and End to Next Transient and Play",
+    "2960": "Selection Start and End to Previous Transient and Play",
+    "2981": "Decrement Loop Start for Row",
+    "1832": "Decrement Loop End for Row",
+    "2970": "Show Subrows for All Rows",
+    "2971": "Hide Subrows for All Rows",
+    "1821": "Increase Number of Transients",
+    "1822": "Decrease Number of Transients",
+    "414": "Copy/Convert Files\u2026",
+    "607": "Play/Stop Region",
+    "441": "Revert to Backup",
+    "1807": "Open in Audio File Editor",
+    "2004": "Aux",
+    "1905": "SBProcs",
+    "2000": "MIDI",
+    "324": "Legato",
+    "33": "Region",
+    "532": "Tap",
+    "1221": "To End",
+    "51": "Catch",
+    "1014": "Tch/Rd",
+    "2006": "Output",
+    "2002": "Audio",
+    "2003": "Inst",
+    "1349": "fade",
+    "1345": "fade last"
+  }
+}

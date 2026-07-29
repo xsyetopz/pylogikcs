@@ -244,7 +244,7 @@ flowchart LR
 
 684 字节的头部包含两份键绑定表的镜像副本（副本 1：~0x01c8–0x0260，副本 2：~0x3384–0x3420）。每条目 4 字节：
 
-```
+```text
 ┌──────────┬──────────┬──────────┬──────────┐
 │  byte 0  │  byte 1  │  byte 2  │  byte 3  │
 ├──────────┼──────────┼──────────┼──────────┤
@@ -258,7 +258,7 @@ flowchart LR
   编码方式为混合编码：
 
   | 范围 | 编码 | 示例 |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x20`–`0x7e` | ASCII 可打印字符 | Space（`0x20`）、`'a'`（`0x61`）、`'-'`（`0x2d`） |
   | `0x00`–`0x1f`、`0x7f` | Apple Carbon `kVK_*` | Return（`0x24`）、Delete（`0x33`）、Escape（`0x35`）、Tab（`0x30`） |
   | `0x7b`–`0x7e` | Carbon 方向键 | 左（`0x7b`）、右（`0x7c`）、下（`0x7d`）、上（`0x7e`） |
@@ -270,7 +270,7 @@ flowchart LR
 - **flags** — 修饰键位掩码：
 
   | 值 | 修饰键 | 来源 |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x00` | 无 | 默认预设，所有记录 |
   | `0x01` | Shift (⇧) | `Record_R_to_SHIFT_R.logikcs` |
   | `0x04` | Ctrl (⌃) | `Play_SPACE_to_CTRL_SPACE.logikcs` |
@@ -280,7 +280,7 @@ flowchart LR
   多修饰键组合已通过 9 个语言预设的按位或运算确认：
 
   | 标志位 | 组合 | 示例命令 |
-  |---|---|---|
+  | --- | --- | --- |
   | `0x21` | Cmd+Shift | "Save Project as…" |
   | `0x25` | Cmd+Ctrl+Shift | "Unpack Take Folder…" |
   | `0x28` | Cmd+Opt | "Split Regions/Events…" |
@@ -294,7 +294,7 @@ flowchart LR
 
 头部还存在第二种条目格式：
 
-```
+```text
 ┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
 │  byte 0  │  byte 1  │  byte 2  │  byte 3  │  byte 4  │  byte 5  │
 ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -311,10 +311,29 @@ flowchart LR
 
 ## 未知项
 
-1. 内部命令索引（f7 记录）到用户可见命令 ID 的映射
+1. 每条内部命令索引到用户可见命令 ID 的映射（已通过 plist 注册表命名 287 个 ID；约 573 个仍未标记）
 2. 记录子类型 B 的内部结构（约 20 条索引值异常的记录）
-3. 6 字节头部条目格式（格式 B）的语义
-4. 尾部的用途（13,980 字节，大部分为零）
-5. Touch Bar 槽位到功能的映射
+3. 6 字节头部条目格式（格式 B — 已禁用/未分配）的语义
+4. 尾部的用途（12–22 KB，取决于 LP 版本）
+5. Touch Bar 槽位到功能的映射（用户设备无 Touch Bar）
 6. KeyCommandColors 中的 `"New Child"` → `""` 条目
-7. 二进制格式在 Logic Pro 不同版本间是否变化
+
+## 跨版本兼容性
+
+| 版本 | 格式 | `f7 00` 记录 | 颜色/名称 | TouchBar | 二进制大小 | 库支持 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logic Pro 7.x–9.1.1 | Pre-LPX | 无 — 偏移 0x01c8 起 6 字节记录，无哨兵 | 无 | 无 | 45–51 KB | ✅ 已解析（.pro 或 .logikcs） |
+| Logic Pro 10.0–10.6.2 | 早期 LPX | 有 — 135–242 条记录 | 有（61/33） | 有（zlib） | 51,508 | ✅ 完整解析 |
+| Logic Pro 10.7–12.3.0 | 当前 LPX | 有 — 155–256 条记录 | 有（61–62/33–42） | 有（zlib） | 43,170 | ✅ 完整解析 |
+
+`f7 00` 哨兵记录格式自 Logic Pro X（10.0）引入，在 12.3 中保持稳定。
+LP 10.7 减少了尾部分配。
+
+Logic Pro 7–9 使用连续的 6 字节记录（`[key_code][flags][4 字节零]`），
+起始偏移为 0x01c8。此时期的文件可能为 `.pro`（原始二进制）或
+`.logikcs`（plist XML 封装）。本库自动检测格式并正确解析两者。
+Format A 头部条目在 pre-LPX 文件中存在，但无双份镜像。
+
+`KeyCommandColors`、`KeyCommandShortNames` 和 `TouchBarAssignments` plist
+键是 Logic Pro X 新增的。Pre-LPX 文件仅有 `Content`、`Version` 和
+`LogicBinaryPreferences`（plist 封装），或为原始二进制（`.pro`）。
