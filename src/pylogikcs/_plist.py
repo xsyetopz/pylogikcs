@@ -105,7 +105,6 @@ def write_plist(preset: LogikcsFile, path: str) -> None:
     binary_bytes = encode_header_entries(binary_bytes, preset.header_bindings)
 
     if preset._is_raw:
-        # .pro file: write raw binary, no plist wrapper
         with open(path, "wb") as fh:
             fh.write(binary_bytes)
         return
