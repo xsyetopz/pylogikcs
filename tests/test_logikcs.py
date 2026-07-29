@@ -1,4 +1,4 @@
-"""Tests for pylogikcs - Logic Pro .logikcs read/write library.
+"""Tests for pylogikcs — Logic Pro .logikcs read/write library.
 
 Uses stdlib unittest (no external test dependencies).
 """
@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 import plistlib
 
-from pylogikcs import ColorMap, KeyBinding, ShortNameMap, load
+from pylogikcs import ColorMap, HeaderBinding, KeyBinding, ShortNameMap, load
 
 FIXTURE = os.path.join(os.path.dirname(__file__), "..", "assets", "Default.logikcs")
 
@@ -78,6 +78,70 @@ class TestKeyBinding(unittest.TestCase):
         self.assertTrue(kb.is_modified)
         kb.mark_clean()
         self.assertFalse(kb.is_modified)
+
+
+# ---------------------------------------------------------------------------
+# HeaderBinding unit tests
+# ---------------------------------------------------------------------------
+
+
+class TestHeaderBinding(unittest.TestCase):
+    def test_from_bytes_valid(self):
+        data = b"\x72\x20\x00\x72"
+        hb = HeaderBinding.from_bytes(data)
+        self.assertEqual(hb.key_code, 0x72)
+        self.assertEqual(hb.flags, 0x20)
+        self.assertEqual(hb.key_char, "r")
+
+    def test_from_bytes_bad_length(self):
+        with self.assertRaises(ValueError):
+            HeaderBinding.from_bytes(b"\x72\x20\x00")
+
+    def test_from_bytes_bad_byte2(self):
+        with self.assertRaises(ValueError):
+            HeaderBinding.from_bytes(b"\x72\x20\x01\x72")
+
+    def test_to_bytes_roundtrip(self):
+        data = b"\x72\x20\x00\x72"
+        hb = HeaderBinding.from_bytes(data)
+        self.assertEqual(hb.to_bytes(), data)
+
+    def test_set_key(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x00)
+        hb.set_key(0x06)
+        self.assertEqual(hb.key_code, 0x06)
+        self.assertTrue(hb.is_modified)
+
+    def test_set_key_range_high(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x00)
+        with self.assertRaises(ValueError):
+            hb.set_key(256)
+
+    def test_set_flags(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x00)
+        hb.set_flags(0x20)
+        self.assertEqual(hb.flags, 0x20)
+        self.assertTrue(hb.is_modified)
+
+    def test_set_flags_range(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x00)
+        with self.assertRaises(ValueError):
+            hb.set_flags(256)
+
+    def test_mark_clean(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x00)
+        hb.set_key(0x06)
+        self.assertTrue(hb.is_modified)
+        hb.mark_clean()
+        self.assertFalse(hb.is_modified)
+
+    def test_key_char_printable(self):
+        hb = HeaderBinding(key_code=0x41, flags=0x00)
+        self.assertEqual(hb.key_char, "A")
+
+    def test_key_char_non_printable(self):
+        hb = HeaderBinding(key_code=0x01, flags=0x00)
+        self.assertEqual(hb.key_char, "0x01")
 
 
 # ---------------------------------------------------------------------------
@@ -147,6 +211,23 @@ class TestLoadDefault(unittest.TestCase):
         for kb in self.preset.bindings:
             self.assertFalse(kb.is_modified)
 
+    def test_header_bindings_count(self):
+        self.assertGreater(len(self.preset.header_bindings), 10)
+
+    def test_header_bindings_have_offsets(self):
+        for hb in self.preset.header_bindings:
+            self.assertGreaterEqual(hb._offset1, 0)
+
+    def test_header_bindings_not_modified_on_load(self):
+        for hb in self.preset.header_bindings:
+            self.assertFalse(hb.is_modified)
+
+    def test_header_bindings_mirrored(self):
+        # Header region entries (copy1) should have mirrors in copy2.
+        # Record-gap entries (higher offsets) may be solo.
+        mirrored = sum(1 for hb in self.preset.header_bindings if hb._offset2 >= 0)
+        self.assertGreater(mirrored, 0, "At least some entries should be mirrored")
+
 
 class TestRoundTrip(unittest.TestCase):
     @classmethod
@@ -181,6 +262,7 @@ class TestRoundTrip(unittest.TestCase):
             self.preset.save(tmp_path)
             reloaded = load(tmp_path)
             self.assertEqual(len(reloaded.bindings), len(self.preset.bindings))
+            self.assertEqual(len(reloaded.header_bindings), len(self.preset.header_bindings))
             self.assertEqual(len(reloaded.colors), len(self.preset.colors))
             self.assertEqual(len(reloaded.short_names), len(self.preset.short_names))
         finally:
@@ -193,7 +275,6 @@ class TestMutation(unittest.TestCase):
         cls.preset = load(FIXTURE)
 
     def setUp(self):
-        """Reset the fixture preset to clean state before each test."""
         self.preset = load(FIXTURE)
 
     def test_modify_binding_persists(self):
@@ -213,9 +294,39 @@ class TestMutation(unittest.TestCase):
 
             self.assertEqual(reloaded.bindings[4].key_code, 0x06)
             self.assertEqual(reloaded.bindings[4].flags, 0x08)
-            # Adjacent bindings untouched
             self.assertEqual(reloaded.bindings[3].value, orig_val_3)
             self.assertEqual(reloaded.bindings[5].value, orig_val_5)
+        finally:
+            os.unlink(tmp_path)
+
+    def test_modify_header_binding_persists(self):
+        with tempfile.NamedTemporaryFile(suffix=".logikcs", delete=False) as tf:
+            tmp_path = tf.name
+
+        try:
+            hb = self.preset.header_bindings[0]
+
+            hb.set_key(0x06)
+            hb.set_flags(0x20)
+            self.assertTrue(hb.is_modified)
+
+            self.preset.save(tmp_path)
+            reloaded = load(tmp_path)
+
+            rhb = reloaded.header_bindings[0]
+            self.assertEqual(rhb.key_code, 0x06)
+            self.assertEqual(rhb.flags, 0x20)
+
+            # Both mirror positions written
+            with open(tmp_path, "rb") as f:
+                saved = plistlib.load(f)["LogicBinaryPreferences"]
+            self.assertEqual(saved[hb._offset1 : hb._offset1 + 4], bytes([0x06, 0x20, 0x00, 0x06]))
+            self.assertEqual(saved[hb._offset2 : hb._offset2 + 4], bytes([0x06, 0x20, 0x00, 0x06]))
+
+            # Adjacent header binding untouched
+            adj = reloaded.header_bindings[1]
+            self.assertEqual(adj.key_code, 0x2E)
+            self.assertEqual(adj.flags, 0x20)
         finally:
             os.unlink(tmp_path)
 
@@ -273,7 +384,13 @@ class TestEdgeCases(unittest.TestCase):
         kb = KeyBinding(command_index=42, value=0x2C00)
         r = repr(kb)
         self.assertIn("42", r)
-        self.assertIn("11264", r)  # value shown as decimal in repr
+        self.assertIn("11264", r)
+
+    def test_headerbinding_repr(self):
+        hb = HeaderBinding(key_code=0x72, flags=0x20)
+        r = repr(hb)
+        self.assertIn("114", r)
+        self.assertIn("32", r)
 
 
 if __name__ == "__main__":

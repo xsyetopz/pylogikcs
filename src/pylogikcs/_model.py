@@ -1,6 +1,6 @@
 """Domain types for Logic Pro .logikcs key-command presets.
 
-Zero I/O dependencies - pure data model with validation.
+Zero I/O dependencies — pure data model with validation.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ from typing import Self
 
 @dataclass
 class KeyBinding:
-    """A single key assignment within a key-command preset.
+    """A single f7-terminated record from LogicBinaryPreferences.
 
     Usage::
 
@@ -32,7 +32,9 @@ class KeyBinding:
     @classmethod
     def from_bytes(cls, data: bytes) -> Self:
         if len(data) != cls.RECORD_LEN:
-            raise ValueError(f"KeyBinding record must be {cls.RECORD_LEN} bytes, got {len(data)}")
+            raise ValueError(
+                f"KeyBinding record must be {cls.RECORD_LEN} bytes, got {len(data)}"
+            )
         if data[4:6] != cls.TERMINATOR:
             raise ValueError(
                 f"KeyBinding terminator mismatch: expected {cls.TERMINATOR.hex()}, "
@@ -52,7 +54,7 @@ class KeyBinding:
 
     @property
     def key_code(self) -> int:
-        """High byte of *value* - the virtual key code."""
+        """High byte of *value* — the virtual key code."""
         return (self.value >> 8) & 0xFF
 
     @key_code.setter
@@ -64,7 +66,7 @@ class KeyBinding:
 
     @property
     def flags(self) -> int:
-        """Low byte of *value* - modifier / flags byte."""
+        """Low byte of *value* — modifier / flags byte."""
         return self.value & 0xFF
 
     @flags.setter
@@ -80,6 +82,70 @@ class KeyBinding:
 
     def mark_clean(self) -> None:
         self._modified = False
+
+
+@dataclass
+class HeaderBinding:
+    """A 4-byte keyed entry from the header's Format A binding table.
+
+    Format: ``[key_code: u8] [flags: u8] [0x00] [key_code_dup: u8]``
+
+    Each entry appears at two mirrored byte offsets in the binary blob.
+    Setting *key_code* or *flags* marks both copies as modified; on save
+    both positions are updated.
+    """
+
+    key_code: int
+    flags: int
+    _offset1: int = field(default=-1, repr=False)
+    _offset2: int = field(default=-1, repr=False)
+    _modified: bool = field(default=False, repr=False)
+
+    ENTRY_LEN: int = 4
+
+    @classmethod
+    def from_bytes(cls, data: bytes, offset: int = -1) -> Self:
+        if len(data) != cls.ENTRY_LEN:
+            raise ValueError(f"HeaderBinding must be {cls.ENTRY_LEN} bytes, got {len(data)}")
+        if data[2] != 0x00:
+            raise ValueError(f"HeaderBinding byte 2 must be 0x00, got 0x{data[2]:02x}")
+        return cls(key_code=data[0], flags=data[1], _offset1=offset)
+
+    def to_bytes(self) -> bytes:
+        return bytes([self.key_code, self.flags, 0x00, self.key_code])
+
+    @property
+    def key_char(self) -> str:
+        """ASCII character for printable keys, else hex notation."""
+        if 32 <= self.key_code < 127:
+            return chr(self.key_code)
+        return f"0x{self.key_code:02x}"
+
+    @property
+    def is_modified(self) -> bool:
+        return self._modified
+
+    def mark_clean(self) -> None:
+        self._modified = False
+
+    # ---- mutation ----------------------------------------------------------
+
+    def set_key(self, v: int) -> None:
+        if not 0 <= v <= 255:
+            raise ValueError(f"key_code must be 0-255, got {v}")
+        self.key_code = v
+        self._modified = True
+
+    def set_flags(self, v: int) -> None:
+        if not 0 <= v <= 255:
+            raise ValueError(f"flags must be 0-255, got {v}")
+        self.flags = v
+        self._modified = True
+
+
+# Keep KeyBinding setters for backward compat but prefer HeaderBinding methods.
+KeyBinding.set_key = lambda self, v: setattr(self, "key_code", v) or None
+KeyBinding.set_flags = lambda self, v: setattr(self, "flags", v) or None
 
 
 class _ValidatedDict(dict[str, str | int]):
@@ -116,6 +182,8 @@ class LogikcsFile:
         preset = LogikcsFile.load("Default.logikcs")
         preset.colors["1012"] = 3
         preset.short_names["1012"] = "RdOff"
+        preset.header_bindings[0].set_key(0x70)
+        preset.header_bindings[0].set_flags(0x20)
         preset.save("Modified.logikcs")
     """
 
@@ -125,10 +193,9 @@ class LogikcsFile:
     colors: ColorMap = field(default_factory=ColorMap)
     short_names: ShortNameMap = field(default_factory=ShortNameMap)
     bindings: list[KeyBinding] = field(default_factory=list)
+    header_bindings: list[HeaderBinding] = field(default_factory=list)
 
     # Raw copies preserved so unchanged entries survive round-trip.
-    # The binary blob stores the original file bytes; mutated records are
-    # spliced in at their recorded offsets on save.
     _binary_blob: bytes = field(default=b"", repr=False)
     _touchbar_raw: bytes = field(default=b"", repr=False)
     _unknown_plist: dict = field(default_factory=dict, repr=False)

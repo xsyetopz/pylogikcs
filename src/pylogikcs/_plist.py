@@ -13,7 +13,7 @@ import copy
 import plistlib
 from typing import TYPE_CHECKING
 
-from ._binary import decode_commands, encode_commands
+from ._binary import decode_commands, decode_header_entries, encode_commands, encode_header_entries
 from ._touchbar import decode_touchbar, encode_touchbar
 
 if TYPE_CHECKING:
@@ -57,6 +57,7 @@ def read_plist(path: str) -> LogikcsFile:
 
     binary_raw: bytes = raw.get("LogicBinaryPreferences", b"")
     bindings, binary_blob = decode_commands(binary_raw)
+    header_bindings = decode_header_entries(binary_blob)
 
     touchbar_raw: bytes = raw.get("TouchBarAssignments", b"")
     touchbar_decompressed = decode_touchbar(touchbar_raw)
@@ -72,6 +73,7 @@ def read_plist(path: str) -> LogikcsFile:
         colors=colors,
         short_names=short_names,
         bindings=bindings,
+        header_bindings=header_bindings,
         _binary_blob=binary_blob,
         _touchbar_raw=touchbar_decompressed,
         _unknown_plist=unknown,
@@ -83,6 +85,7 @@ def read_plist(path: str) -> LogikcsFile:
 
 def write_plist(preset: LogikcsFile, path: str) -> None:
     binary_bytes = encode_commands(preset._binary_blob, preset.bindings)
+    binary_bytes = encode_header_entries(binary_bytes, preset.header_bindings)
     touchbar_bytes = encode_touchbar(preset._touchbar_raw)
 
     out: dict = {}

@@ -261,13 +261,87 @@ Two separate ID spaces exist:
 The mapping between these spaces is not yet reverse-engineered.  The header
 section may encode this mapping.
 
+## Header section — keyed entries
+
+The 684-byte header contains two copies of a key-binding table at mirrored
+offsets (copy 1: ~0x01c8–0x0260, copy 2: ~0x3384–0x3420).  Each entry is
+4 bytes:
+
+```
+┌──────────┬──────────┬──────────┬──────────┐
+│  byte 0  │  byte 1  │  byte 2  │  byte 3  │
+├──────────┼──────────┼──────────┼──────────┤
+│ key_code │  flags   │   0x00   │ key_code │
+│ (ASCII)  │          │(reserved)│  (dupe)  │
+└──────────┴──────────┴──────────┴──────────┘
+```
+
+- **key_code** — the unmodified character the key produces (ASCII).  Uppercase
+  letters are stored as lowercase (e.g., `'P'` → `0x70` `'p'`).
+  The encoding is hybrid:
+
+  | Range | Encoding | Examples |
+  |---|---|---|
+  | `0x20`–`0x7e` | ASCII printable | Space (`0x20`), `'a'` (`0x61`), `'-'` (`0x2d`) |
+  | `0x00`–`0x1f`, `0x7f` | Apple Carbon `kVK_*` | Return (`0x24`), Delete (`0x33`), Escape (`0x35`), Tab (`0x30`) |
+  | `0x7b`–`0x7e` | Carbon arrow keys | Left (`0x7b`), Right (`0x7c`), Down (`0x7d`), Up (`0x7e`) |
+  | `0x80`–`0xff` | Extended ASCII (locale-specific) | Swedish `'ä'` (`0xe4`), `'å'` (`0xe5`), `'ö'` (`0xf6`) |
+
+  Non-English presets (Swedish, Simplified Chinese) use high-byte codes for
+  locale-specific characters.  The Swedish preset confirmed this with 505
+  keyboard bindings matching the `Swedish_clipboard.txt` export.
+
+- **flags** — modifier key bitmask:
+
+  | Value | Modifier | Source |
+  |---|---|---|
+  | `0x00` | None | Default preset, all records |
+  | `0x01` | Shift (⇧) | `Record_R_to_SHIFT_R.logikcs` |
+  | `0x04` | Ctrl (⌃) | `Play_SPACE_to_CTRL_SPACE.logikcs` |
+  | `0x08` | Opt (⌥) | `Play_SPACE_to_OPT_SPACE.logikcs` |
+  | `0x20` | Cmd (⌘) | `Play_SPACE_to_CMD_P.logikcs` |
+
+  Multi-modifier combinations confirmed via bitwise OR across 9 locale presets:
+
+  | Flags | Combination | Example command |
+  |---|---|---|
+  | `0x21` | Cmd+Shift | "Save Project as…" |
+  | `0x25` | Cmd+Ctrl+Shift | "Unpack Take Folder…" |
+  | `0x28` | Cmd+Opt | "Split Regions/Events…" |
+  | `0x09` | Opt+Shift | "Open Tempo List…" |
+  | `0x0d` | Opt+Ctrl+Shift | "Toggle Autopunch Mode" (German) |
+  | `0x2c` | Cmd+Opt+Ctrl | "Toggle Autopunch Mode" (French) |
+
+- **byte 2** — always `0x00` in observed entries.  Reserved or padding.
+
+- **byte 3** — duplicate of byte 0.  Likely a checksum or alignment aid.
+
+A second entry format appears in the header:
+
+```
+┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+│  byte 0  │  byte 1  │  byte 2  │  byte 3  │  byte 4  │  byte 5  │
+├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+│ key_code │   0x00   │   0x00   │   0x00   │   0x00   │   0x01   │
+│ (ASCII)  │          │          │          │          │(sentinel)│
+└──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
+This 6-byte variant omits the flags byte and the duplicate.  It may represent
+commands in a "disabled" or "unassigned" state, or encode a different key type
+(single-keystroke commands vs. key-binding assignments).  The trailing `0x01`
+byte acts as a type tag.
+
+Both formats coexist in the header.  Format B entries are converted to
+Format A when a modifier is assigned.
+
 ## Unknowns
 
-1. Exact header field semantics (single-character keys and their values)
-2. Mapping from internal command indices to user-visible command IDs
-3. Record subtype B internal structure
-4. Modifier key constants (confirmed: `0x00` = no modifiers)
-5. Trailer purpose
-6. Touch Bar slot-to-function mapping
-7. The `"New Child"` -> `""` entry in KeyCommandColors
-8. Whether the format changes across Logic Pro versions
+1. Mapping from internal command indices (f7 records) to user-visible command
+   IDs (from `KeyCommandColors` / `KeyCommandShortNames`)
+2. Record subtype B internal structure (the ~20 records with inflated indices)
+3. Semantics of the 6-byte header entry format (Format B)
+4. Trailer purpose (13,980 bytes, mostly zeroes)
+5. Touch Bar slot-to-function mapping
+6. The `"New Child"` → `""` entry in KeyCommandColors
+7. Whether the binary format changes across Logic Pro versions
