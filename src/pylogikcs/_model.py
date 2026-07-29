@@ -6,7 +6,6 @@ Zero I/O dependencies — pure data model with validation.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Self
 
 
 @dataclass
@@ -30,7 +29,7 @@ class KeyBinding:
     RECORD_LEN: int = 6
 
     @classmethod
-    def from_bytes(cls, data: bytes) -> Self:
+    def from_bytes(cls, data: bytes) -> KeyBinding:
         if len(data) != cls.RECORD_LEN:
             raise ValueError(f"KeyBinding record must be {cls.RECORD_LEN} bytes, got {len(data)}")
         if data[4:6] != cls.TERMINATOR:
@@ -102,7 +101,7 @@ class HeaderBinding:
     ENTRY_LEN: int = 4
 
     @classmethod
-    def from_bytes(cls, data: bytes, offset: int = -1) -> Self:
+    def from_bytes(cls, data: bytes, offset: int = -1) -> HeaderBinding:
         if len(data) != cls.ENTRY_LEN:
             raise ValueError(f"HeaderBinding must be {cls.ENTRY_LEN} bytes, got {len(data)}")
         if data[2] != 0x00:
@@ -146,11 +145,6 @@ class HeaderBinding:
         self._modified = True
 
 
-# Keep KeyBinding setters for backward compat but prefer HeaderBinding methods.
-KeyBinding.set_key = lambda self, v: setattr(self, "key_code", v) or None
-KeyBinding.set_flags = lambda self, v: setattr(self, "flags", v) or None
-
-
 class _ValidatedDict(dict[str, str | int]):
     """Dict that coerces string keys and validates values on set."""
 
@@ -188,6 +182,7 @@ def _load_registry() -> dict:
         path = Path(__file__).parent / "_registry.json"
         with open(path) as f:
             _registry = json.load(f)
+    assert _registry is not None
     return _registry
 
 
@@ -241,7 +236,7 @@ class LogikcsFile:
     _is_raw: bool = field(default=False, repr=False)  # True for .pro files (no plist wrapper)
 
     @classmethod
-    def load(cls, path: str) -> Self:
+    def load(cls, path: str) -> LogikcsFile:
         from ._plist import read_plist
 
         return read_plist(path)
