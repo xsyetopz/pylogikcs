@@ -31,19 +31,9 @@ _HEADER_COPY1_RANGE = (0x0000, 0x0300)
 _HEADER_COPY2_RANGE = (0x3300, 0x3700)
 
 
-# ---------------------------------------------------------------------------
-# Format detection
-# ---------------------------------------------------------------------------
-
-
 def _is_lpx_format(raw: bytes) -> bool:
     """True if the blob contains ``0xF7 0x00`` sentinels (LPX format)."""
     return _SENTINEL in raw
-
-
-# ---------------------------------------------------------------------------
-# LPX: f7-terminated records
-# ---------------------------------------------------------------------------
 
 
 def _decode_lpx(raw: bytes) -> tuple[list[KeyBinding], bytes]:
@@ -82,18 +72,7 @@ def _encode_lpx(raw_blob: bytes, bindings: list[KeyBinding]) -> bytes:
     return bytes(data)
 
 
-# ---------------------------------------------------------------------------
-# Pre-LPX: contiguously-aligned 6-byte records
-# ---------------------------------------------------------------------------
-
-
 def _decode_pre_lpx(raw: bytes) -> tuple[list[KeyBinding], bytes]:
-    """Parse pre-LPX 6-byte records starting at ``_PRE_LPX_RECORD_START``.
-
-    Each record: ``[byte0][byte1][u32 LE]``.  Interpreted uniformly as
-    a ``KeyBinding`` with ``command_index`` = u16 LE of bytes 0-1 and
-    ``value`` = u32 LE of bytes 2-5.
-    """
     from ._model import KeyBinding
 
     if not raw or len(raw) < _PRE_LPX_RECORD_START + _PRE_LPX_RECORD_LEN:
@@ -102,7 +81,7 @@ def _decode_pre_lpx(raw: bytes) -> tuple[list[KeyBinding], bytes]:
     bindings: list[KeyBinding] = []
     offset = _PRE_LPX_RECORD_START
     zero_run = 0
-    MAX_ZERO_RUN = 96  # stop after 96 bytes (16 records) of consecutive zeros
+    MAX_ZERO_RUN = 96
 
     while offset + _PRE_LPX_RECORD_LEN <= len(raw):
         chunk = raw[offset : offset + _PRE_LPX_RECORD_LEN]
@@ -116,8 +95,8 @@ def _decode_pre_lpx(raw: bytes) -> tuple[list[KeyBinding], bytes]:
 
         zero_run = 0
         raw_cmd = int.from_bytes(chunk[0:2], "little")
-        # Bytes 0-1: [key_code][flags].  Arrange as LPX-style value
-        # so that key_code (hi byte) and flags (lo byte) properties work.
+        # Bytes 0-1: [key_code][flags].  Arrange value so that key_code
+        # (hi byte) and flags (lo byte) properties match LPX convention.
         key_code = chunk[0]
         flags = chunk[1]
         value = (key_code << 8) | flags
@@ -130,7 +109,6 @@ def _decode_pre_lpx(raw: bytes) -> tuple[list[KeyBinding], bytes]:
 
 
 def _encode_pre_lpx(raw_blob: bytes, bindings: list[KeyBinding]) -> bytes:
-    """Splice modified pre-LPX records back at their offsets."""
     data = bytearray(raw_blob)
     for kb in bindings:
         if not kb.is_modified:
@@ -138,15 +116,9 @@ def _encode_pre_lpx(raw_blob: bytes, bindings: list[KeyBinding]) -> bytes:
         offset = getattr(kb, "_offset", -1)
         if offset < 0 or offset + _PRE_LPX_RECORD_LEN > len(data):
             continue
-        # Rebuild 6-byte record: bytes 0-1 = [key_code][flags], bytes 2-5 = zeros
         rec = bytes([kb.key_code, kb.flags]) + b"\x00\x00\x00\x00"
         data[offset : offset + _PRE_LPX_RECORD_LEN] = rec
     return bytes(data)
-
-
-# ---------------------------------------------------------------------------
-# Public API — autodetecting
-# ---------------------------------------------------------------------------
 
 
 def decode_commands(raw: bytes) -> tuple[list[KeyBinding], bytes]:
@@ -170,18 +142,12 @@ def encode_commands(raw_blob: bytes, bindings: list[KeyBinding]) -> bytes:
     return _encode_pre_lpx(raw_blob, bindings)
 
 
-# ---------------------------------------------------------------------------
-# Format A header entries (works across both eras)
-# ---------------------------------------------------------------------------
-
-
 def _is_format_a(data: bytes, i: int) -> bool:
-    """True if ``data[i:i+4]`` matches ``[k][f][0x00][k]`` with k != 0."""
     return data[i] != 0 and data[i + 2] == 0x00 and data[i] == data[i + 3]
 
 
 def decode_header_entries(raw: bytes) -> list[HeaderBinding]:
-    """Find all Format A entries in both header copies.
+    """Find all Format A entries.
 
     For LPX: entries at offset *off* in copy 1 have a mirror at roughly
     ``off + 0x31bc`` in copy 2.  For pre-LPX: search the entire blob
@@ -193,7 +159,6 @@ def decode_header_entries(raw: bytes) -> list[HeaderBinding]:
         return []
 
     is_lpx = _is_lpx_format(raw)
-
     search_ranges = [_HEADER_COPY1_RANGE, _HEADER_COPY2_RANGE] if is_lpx else [(0, len(raw))]
 
     all_entries: list[tuple[int, int, int]] = []
@@ -205,7 +170,6 @@ def decode_header_entries(raw: bytes) -> list[HeaderBinding]:
                 all_entries.append((i, raw[i], raw[i + 1]))
 
     if not is_lpx:
-        # Pre-LPX: no mirroring, return solo entries
         entries = [
             HeaderBinding(key_code=k, flags=f, _offset1=off, _offset2=-1)
             for off, k, f in all_entries
@@ -213,7 +177,6 @@ def decode_header_entries(raw: bytes) -> list[HeaderBinding]:
         entries.sort(key=lambda hb: hb._offset1)
         return entries
 
-    # LPX: pair by mirror offset
     copy1 = [(off, k, f) for off, k, f in all_entries if off < _HEADER_COPY2_RANGE[0]]
     copy2 = {(off, k, f) for off, k, f in all_entries if off >= _HEADER_COPY2_RANGE[0]}
 
@@ -241,7 +204,6 @@ def decode_header_entries(raw: bytes) -> list[HeaderBinding]:
 
 
 def encode_header_entries(raw_blob: bytes, entries: list[HeaderBinding]) -> bytes:
-    """Splice modified header entries back into both mirrored positions."""
     data = bytearray(raw_blob)
     for hb in entries:
         if not hb.is_modified:
