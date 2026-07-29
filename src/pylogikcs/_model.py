@@ -130,8 +130,6 @@ class HeaderBinding:
     def mark_clean(self) -> None:
         self._modified = False
 
-    # ---- mutation ----------------------------------------------------------
-
     def set_key(self, v: int) -> None:
         if not 0 <= v <= 255:
             raise ValueError(f"key_code must be 0-255, got {v}")
